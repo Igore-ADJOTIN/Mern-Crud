@@ -1,0 +1,5488 @@
+1
+00:00:00,060 --> 00:00:02,340
+Apprenez à utiliser Mernstack en
+
+2
+00:00:02,340 --> 00:00:04,860
+créant une application de librairie. Le
+
+3
+00:00:04,860 --> 00:00:07,080
+Mernstack est un puissant mélange de Mongodb,
+
+4
+00:00:07,080 --> 00:00:10,200
+d'une base de données Nosql, d'Express.js, d'un
+
+5
+00:00:10,200 --> 00:00:12,780
+framework Web, de React.js, d'une bibliothèque JavaScript de création d'interface utilisateur
+
+6
+00:00:12,780 --> 00:00:15,480
+et de Node.js, d'un
+
+7
+00:00:15,480 --> 00:00:16,920
+environnement JavaScript côté serveur.
+
+8
+00:00:16,920 --> 00:00:19,260
+Ensemble, ils fournissent un
+
+9
+00:00:19,260 --> 00:00:20,820
+cadre cohérent pour créer
+
+10
+00:00:20,820 --> 00:00:23,520
+des applications Web réactives efficaces Mohammed
+
+11
+00:00:23,520 --> 00:00:25,680
+taheri est un développeur full stack et il
+
+12
+00:00:25,680 --> 00:00:27,840
+vous apprendra rapidement et simplement comment
+
+13
+00:00:27,840 --> 00:00:30,300
+construire avec la pile myrn bonjour à
+
+14
+00:00:30,300 --> 00:00:33,059
+tous, alors quel est le plan que nous
+
+15
+00:00:33,059 --> 00:00:34,739
+allons créer un projet de librairie de base que
+
+16
+00:00:34,739 --> 00:00:37,200
+nous utilisons Mana Stacks  nous aurons donc
+
+17
+00:00:37,200 --> 00:00:41,399
+mongodb express.js React et Dot JS
+
+18
+00:00:41,399 --> 00:00:44,520
+juste quelques petits conseils avant de commencer vous
+
+19
+00:00:44,520 --> 00:00:46,860
+devez connaître JavaScript et Basic React pour
+
+20
+00:00:46,860 --> 00:00:48,660
+ce tutoriel J'essaie de
+
+21
+00:00:48,660 --> 00:00:51,420
+tout expliquer le plus simplement possible toutes
+
+22
+00:00:51,420 --> 00:00:53,700
+les citations sont disponibles sur mon GitHub vous
+
+23
+00:00:53,700 --> 00:00:55,500
+pouvez trouver le lien  dans la description de la vidéo,
+
+24
+00:00:55,500 --> 00:00:58,320
+de quoi avez-vous besoin pour ce tutoriel,
+
+25
+00:00:58,320 --> 00:01:00,059
+vous devez d'abord avoir node.js sur Instagram sur
+
+26
+00:01:00,059 --> 00:01:02,579
+votre ordinateur, puis vous avez besoin d'un
+
+27
+00:01:02,579 --> 00:01:05,459
+éditeur de code et d'un navigateur que j'utilise vs code et
+
+28
+00:01:05,459 --> 00:01:07,400
+chrome mais vous pouvez utiliser tout ce que vous voulez,
+
+29
+00:01:07,400 --> 00:01:11,220
+non, allons-y et commençons à coder.  créez d'abord
+
+30
+00:01:11,220 --> 00:01:12,960
+un nouveau dossier avec le nom de la
+
+31
+00:01:12,960 --> 00:01:16,320
+pile man bookestore, puis ouvrez-le dans
+
+32
+00:01:16,320 --> 00:01:18,000
+VSCO
+
+33
+00:01:18,000 --> 00:01:20,520
+ici, créez deux dossiers séparés pour
+
+34
+00:01:20,520 --> 00:01:24,000
+les projets backend et front-end. J'ai également
+
+35
+00:01:24,000 --> 00:01:26,820
+créé ce fichier git ignore et également un
+
+36
+00:01:26,820 --> 00:01:29,580
+fichier readme.md pour le dépôt GitHub, vous
+
+37
+00:01:29,580 --> 00:01:33,299
+pouvez l'ignorer  maintenant, initialisons notre
+
+38
+00:01:33,299 --> 00:01:35,520
+projet, assurez-vous que vous êtes sur le
+
+39
+00:01:35,520 --> 00:01:38,340
+dossier backends et tapez CD backend pour
+
+40
+00:01:38,340 --> 00:01:42,060
+accéder au dossier backend, puis tapez npm initi
+
+41
+00:01:42,060 --> 00:01:44,700
+Y et appuyez sur Entrée, cette commande ajoutera
+
+42
+00:01:44,700 --> 00:01:47,100
+un package Json à notre projet
+
+43
+00:01:47,100 --> 00:01:49,680
+et à l'intérieur de ce fichier package.json
+
+44
+00:01:49,680 --> 00:01:52,380
+ajoutons une nouvelle ligne avec le type de
+
+45
+00:01:52,380 --> 00:01:55,079
+module, cette ligne nous permettra d'utiliser la
+
+46
+00:01:55,079 --> 00:01:57,060
+syntaxe ecmascript qui est le
+
+47
+00:01:57,060 --> 00:01:59,939
+mot-clé import et le mot-clé Export. Ajoutons également
+
+48
+00:01:59,939 --> 00:02:01,820
+deux paquets à notre projet
+
+49
+00:02:01,820 --> 00:02:04,860
+express.js et pas plus, alors tapons
+
+50
+00:02:04,860 --> 00:02:08,818
+npmi Express node mod que nous utilisons express.  comme
+
+51
+00:02:08,818 --> 00:02:11,160
+notre framework et nous utilisons également notebook
+
+52
+00:02:11,160 --> 00:02:13,020
+pour redémarrer le serveur automatiquement
+
+53
+00:02:13,020 --> 00:02:16,319
+sans changement, ajoutons maintenant des scripts à
+
+54
+00:02:16,319 --> 00:02:18,900
+une section de script. Un démarrage exécutera le
+
+55
+00:02:18,900 --> 00:02:21,660
+projet avec l'environnement node.js,
+
+56
+00:02:21,660 --> 00:02:23,879
+puis nous apprenons le projet avec nodemon
+
+57
+00:02:23,879 --> 00:02:26,340
+et nous utilisons cette commande en développement
+
+58
+00:02:26,340 --> 00:02:28,920
+maintenant.  créons un nouveau fichier avec le nom
+
+59
+00:02:28,920 --> 00:02:31,620
+index.js ce fichier sera le démarreur
+
+60
+00:02:31,620 --> 00:02:33,900
+de notre projet dont nous avons besoin du
+
+61
+00:02:33,900 --> 00:02:36,660
+framework express.js donc ajoutons-le ici puis
+
+62
+00:02:36,660 --> 00:02:39,180
+définissons une nouvelle variable pour lui
+
+63
+00:02:39,180 --> 00:02:41,700
+puis faisons-lui écouter un port c'est une
+
+64
+00:02:41,700 --> 00:02:43,620
+meilleure solution  pour séparer vos
+
+65
+00:02:43,620 --> 00:02:46,200
+codes en différents fichiers et dossiers, donc
+
+66
+00:02:46,200 --> 00:02:47,940
+pour le port, je veux créer un autre
+
+67
+00:02:47,940 --> 00:02:50,580
+fichier avec le nom de config.js et je
+
+68
+00:02:50,580 --> 00:02:53,700
+définirai mon port dans ce fichier. Une meilleure façon
+
+69
+00:02:53,700 --> 00:02:55,800
+de sauvegarder cette variable de port est ce n
+
+70
+00:02:55,800 --> 00:02:58,200
+fichier mais je ne le fais pas.  Je ne veux pas l'ajouter à ce
+
+71
+00:02:58,200 --> 00:03:00,900
+projet, alors utilisons ce config.js pour
+
+72
+00:03:00,900 --> 00:03:03,540
+ce tutoriel, puis vous devez importer
+
+73
+00:03:03,540 --> 00:03:06,360
+le fichier index.js de support et l'utiliser.
+
+74
+00:03:06,360 --> 00:03:08,459
+Nous avons besoin d'une fonction pour écouter ce
+
+75
+00:03:08,459 --> 00:03:10,920
+port, créons après la fonction d'écoute
+
+76
+00:03:10,920 --> 00:03:14,940
+et utilisons notre port.  dedans après le port, nous pouvons
+
+77
+00:03:14,940 --> 00:03:17,640
+transmettre une fonction de rappel à app.listen
+
+78
+00:03:17,640 --> 00:03:20,220
+et ayons un seul console.log avec
+
+79
+00:03:20,220 --> 00:03:22,140
+un message pour être sûr que tout va
+
+80
+00:03:22,140 --> 00:03:25,260
+bien maintenant, exécutons notre projet en utilisant le
+
+81
+00:03:25,260 --> 00:03:28,920
+terminal Esco de type npm brand div cette
+
+82
+00:03:28,920 --> 00:03:30,840
+commande démarrera le serveur  sur notre
+
+83
+00:03:30,840 --> 00:03:33,780
+numéro de port sélectionné dans la console, si vous voyez
+
+84
+00:03:33,780 --> 00:03:35,760
+ce message, cela signifie que notre serveur est en
+
+85
+00:03:35,760 --> 00:03:39,800
+cours d'exécution et que nous n'avons aucun problème
+
+86
+00:03:40,340 --> 00:03:44,099
+maintenant, nous avons un serveur de base. Ce
+
+87
+00:03:44,099 --> 00:03:46,260
+langage de serveur est Javascript, il utilise
+
+88
+00:03:46,260 --> 00:03:48,840
+express.js comme framework backend et
+
+89
+00:03:48,840 --> 00:03:50,700
+vous pouvez  exécutons ce serveur sur n'importe quelle machine
+
+90
+00:03:50,700 --> 00:03:53,640
+avec l'environnement node.js, exécutons-le
+
+91
+00:03:53,640 --> 00:03:56,099
+et voyons d'abord le résultat. Je vérifie mon
+
+92
+00:03:56,099 --> 00:03:58,459
+environnement node.js avec cette commande
+
+93
+00:03:58,459 --> 00:04:00,959
+node.v cette commande doit vous donner la
+
+94
+00:04:00,959 --> 00:04:03,900
+version de node.js installé puis j'utilise
+
+95
+00:04:03,900 --> 00:04:07,200
+npm de Dev  pour bien exécuter mon serveur en utilisant
+
+96
+00:04:07,200 --> 00:04:09,840
+le bloc-notes, nous voyons le message de réussite
+
+97
+00:04:09,840 --> 00:04:12,840
+et c'est bon maintenant, ouvrons notre navigateur
+
+98
+00:04:12,840 --> 00:04:14,819
+et vérifions le résultat sur le port du serveur
+
+99
+00:04:14,819 --> 00:04:19,560
+qui est 5555, nous devons donc aller au
+
+100
+00:04:19,560 --> 00:04:23,880
+point d'accès local 55555 et ce message montre que nous
+
+101
+00:04:23,880 --> 00:04:27,180
+ne pouvons pas obtenir de barre oblique, ouvrons le développeur
+
+102
+00:04:27,180 --> 00:04:30,540
+outils et allez dans la section réseau ici vous
+
+103
+00:04:30,540 --> 00:04:33,300
+pouvez voir les demandes réseau J'actualise ma
+
+104
+00:04:33,300 --> 00:04:35,639
+page vous pouvez voir une demande à localhost
+
+105
+00:04:35,639 --> 00:04:39,000
+et elle a un statut de 404 cliquons
+
+106
+00:04:39,000 --> 00:04:41,639
+dessus pour voir plus de détails ici nous avons
+
+107
+00:04:41,639 --> 00:04:44,639
+trois sections cliquez sur Général maintenant vous
+
+108
+00:04:44,639 --> 00:04:47,220
+pouvez voir  URL de demande méthode de demande
+
+109
+00:04:47,220 --> 00:04:50,400
+code d'état et autres données un code d'état
+
+110
+00:04:50,400 --> 00:04:52,860
+de 404 signifie que nous n'avons pas l'
+
+111
+00:04:52,860 --> 00:04:55,860
+URL demandée pour chaque URL dont nous avons besoin pour
+
+112
+00:04:55,860 --> 00:04:58,199
+avoir une route HTTP la route HTTP par défaut
+
+113
+00:04:58,199 --> 00:05:00,660
+du serveur est une barre oblique et vous
+
+114
+00:05:00,660 --> 00:05:02,340
+pouvez voir le message  de ne peut pas obtenir une
+
+115
+00:05:02,340 --> 00:05:06,419
+barre oblique, alors faisons-le dans index.js, nous
+
+116
+00:05:06,419 --> 00:05:08,699
+utilisons le framework Express pour créer nos
+
+117
+00:05:08,699 --> 00:05:11,639
+racines HTTP. Je veux créer une nouvelle route pour une
+
+118
+00:05:11,639 --> 00:05:15,120
+route slash. J'utilise app.get, le get est notre
+
+119
+00:05:15,120 --> 00:05:17,280
+méthode HTTP généralement utilisée pour
+
+120
+00:05:17,280 --> 00:05:19,620
+obtenir une barre oblique.  ressource du serveur, nous avons
+
+121
+00:05:19,620 --> 00:05:21,960
+d'autres méthodes HTTP et nous travaillerons
+
+122
+00:05:21,960 --> 00:05:24,660
+avec elles plus tard, le premier paramètre de
+
+123
+00:05:24,660 --> 00:05:27,720
+get est une chaîne pour notre ligne,
+
+124
+00:05:27,720 --> 00:05:30,600
+utilisons donc une barre oblique, le deuxième paramètre est sur la
+
+125
+00:05:30,600 --> 00:05:32,400
+fonction de rappel qui gère cette
+
+126
+00:05:32,400 --> 00:05:34,860
+demande dans cette fonction de rappel que nous
+
+127
+00:05:34,860 --> 00:05:37,020
+recevons la demande  et la réponse et nous pouvons
+
+128
+00:05:37,020 --> 00:05:39,720
+gérer les deux, par exemple nous pouvons
+
+129
+00:05:39,720 --> 00:05:41,940
+déverrouiller la demande et nous pouvons également
+
+130
+00:05:41,940 --> 00:05:43,940
+renvoyer n'importe quel message avec notre réponse,
+
+131
+00:05:43,940 --> 00:05:47,400
+nous pouvons également envoyer un code d'état HTTP, par
+
+132
+00:05:47,400 --> 00:05:50,340
+exemple envoyons 234 avec n'importe quel message que
+
+133
+00:05:50,340 --> 00:05:53,280
+vous voulez et vérifions maintenant le navigateur
+
+134
+00:05:53,280 --> 00:05:54,240
+
+
+135
+00:05:54,240 --> 00:05:57,419
+ok, nous avons notre message et notre
+
+136
+00:05:57,419 --> 00:06:02,060
+code d'état est également 2 3 4.
+
+137
+00:06:02,699 --> 00:06:05,699
+ajoutons maintenant une base de données mongodb à notre
+
+138
+00:06:05,699 --> 00:06:08,160
+projet, vous pouvez utiliser une base de données locale ou
+
+139
+00:06:08,160 --> 00:06:10,560
+une base de données en ligne dans ce tutoriel. Je
+
+140
+00:06:10,560 --> 00:06:13,199
+souhaite utiliser une base de données en ligne gratuite,
+
+141
+00:06:13,199 --> 00:06:15,840
+ouvrons mongodb.  com
+
+142
+00:06:15,840 --> 00:06:18,479
+et sur ce site Web, cliquez sur le
+
+143
+00:06:18,479 --> 00:06:21,660
+bouton de connexion ici, vous pouvez vous inscrire si vous n'avez pas
+
+144
+00:06:21,660 --> 00:06:24,180
+de compte. J'ai déjà créé un
+
+145
+00:06:24,180 --> 00:06:25,979
+compte ici, donc je choisis
+
+146
+00:06:25,979 --> 00:06:28,680
+l'authentification Google pour vous connecter
+
+147
+00:06:28,680 --> 00:06:32,639
+ici, cliquez sur créer la base de données
+
+148
+00:06:32,639 --> 00:06:35,819
+dans la première ligne, nous voyons le  options Je choisis le
+
+149
+00:06:35,819 --> 00:06:38,580
+forfait gratuit et zéro Je ne change pas
+
+150
+00:06:38,580 --> 00:06:41,400
+de fournisseur et de région ce n'est pas important
+
+151
+00:06:41,400 --> 00:06:44,100
+dans ce tutoriel ensuite je choisis un nom
+
+152
+00:06:44,100 --> 00:06:47,759
+pour ma base de données comme la balise de carte du magasin de livres
+
+153
+00:06:47,759 --> 00:06:50,160
+est facultative donc je ne l'utilise pas et je
+
+154
+00:06:50,160 --> 00:06:53,060
+crée en fait
+
+155
+00:06:53,280 --> 00:06:55,560
+ici nous choisissons  l'authentification avec
+
+156
+00:06:55,560 --> 00:06:58,319
+nom d'utilisateur et mot de passe J'utilise une
+
+157
+00:06:58,319 --> 00:07:00,479
+route simple pour le nom d'utilisateur et un root pour le
+
+158
+00:07:00,479 --> 00:07:03,240
+mot de passe mais n'oubliez pas de toujours avoir
+
+159
+00:07:03,240 --> 00:07:05,880
+un mot de passe fort pour votre base de données et
+
+160
+00:07:05,880 --> 00:07:08,039
+c'est un projet local je n'ajoute aucune
+
+161
+00:07:08,039 --> 00:07:10,919
+IP pour cette base de données puis cliquez  terminez
+
+162
+00:07:10,919 --> 00:07:12,780
+et fermez
+
+163
+00:07:12,780 --> 00:07:15,419
+ici, vous pouvez voir la liste de vos bases de données,
+
+164
+00:07:15,419 --> 00:07:17,520
+cliquons sur le bouton de connexion pour obtenir la
+
+165
+00:07:17,520 --> 00:07:20,280
+chaîne de connexion ici, cliquez sur les pilotes
+
+166
+00:07:20,280 --> 00:07:22,800
+et ici dans la première section, sélectionnez la
+
+167
+00:07:22,800 --> 00:07:25,800
+dernière version de node.js dans la troisième
+
+168
+00:07:25,800 --> 00:07:28,500
+section, copiez cette chaîne de connexion dont nous avons
+
+169
+00:07:28,500 --> 00:07:31,740
+besoin pour l'utiliser  sur notre serveur alors allons
+
+170
+00:07:31,740 --> 00:07:34,199
+sur config.js et créons une nouvelle variable
+
+171
+00:07:34,199 --> 00:07:37,500
+pour cela et collez-la ici et vous devez
+
+172
+00:07:37,500 --> 00:07:40,259
+ajouter votre mot de passe ici et vous pouvez également
+
+173
+00:07:40,259 --> 00:07:42,960
+choisir un nom de collection alors ici
+
+174
+00:07:42,960 --> 00:07:45,720
+ajoutons une collection de livres, veuillez créer une
+
+175
+00:07:45,720 --> 00:07:47,880
+base de données gratuite pour  vous-même, cette base de données
+
+176
+00:07:47,880 --> 00:07:50,699
+sera supprimée après le didacticiel, allons maintenant
+
+177
+00:07:50,699 --> 00:07:53,759
+à index.js et utilisons-la. Je l'importe
+
+178
+00:07:53,759 --> 00:07:55,860
+depuis config.js
+
+179
+00:07:55,860 --> 00:07:58,740
+et pour travailler avec la base de données mongodb, nous avons
+
+180
+00:07:58,740 --> 00:08:01,319
+besoin d'une bibliothèque Goose, installons-la en
+
+181
+00:08:01,319 --> 00:08:05,220
+utilisant npmi mongoose
+
+182
+00:08:05,220 --> 00:08:08,160
+puis importons-la dans notre fichier, nous pouvons  utilisez
+
+183
+00:08:08,160 --> 00:08:10,020
+Mongoose qui se connecte pour connecter
+
+184
+00:08:10,020 --> 00:08:13,259
+la base de données et ajoutez-y une URL en tant que paramètre,
+
+185
+00:08:13,259 --> 00:08:16,380
+nous pouvons alors avoir cette
+
+186
+00:08:16,380 --> 00:08:18,360
+structure de cache pour gérer différentes situations
+
+187
+00:08:18,360 --> 00:08:22,199
+de succès et d'échec sur le cache. Je
+
+188
+00:08:22,199 --> 00:08:24,300
+reçois simplement l'erreur et la consigne dans la
+
+189
+00:08:24,300 --> 00:08:27,599
+console, puis d'abord  Je me connecte
+
+190
+00:08:27,599 --> 00:08:29,819
+
+
+191
+00:08:29,819 --> 00:08:32,640
+également au message de réussite à la console. Je souhaite également que mon serveur Express ne s'exécute
+
+192
+00:08:32,640 --> 00:08:34,559
+que si la connexion à la base de données
+
+193
+00:08:34,559 --> 00:08:38,339
+réussit. Je coupe donc simplement ma
+
+194
+00:08:38,339 --> 00:08:40,740
+méthode app.listen et la colle à l'intérieur de ce bloc.
+
+195
+00:08:40,740 --> 00:08:44,039
+Exécutons maintenant notre serveur en npm, exécutons-
+
+196
+00:08:44,039 --> 00:08:46,920
+y et vérifions la console si  nous voyons
+
+197
+00:08:46,920 --> 00:08:49,019
+deux messages de réussite, cela signifie que tout va
+
+198
+00:08:49,019 --> 00:08:51,360
+bien et que la base de données et le serveur
+
+199
+00:08:51,360 --> 00:08:53,720
+fonctionnent
+
+200
+00:08:54,360 --> 00:08:57,180
+maintenant, nous avons la base de données mongodb et
+
+201
+00:08:57,180 --> 00:08:59,459
+la bibliothèque Mongoose Mongoose est une
+
+202
+00:08:59,459 --> 00:09:01,260
+bibliothèque de surveillance des données d'objets populaire pour
+
+203
+00:09:01,260 --> 00:09:03,540
+mongodb, elle nous permet d'interagir
+
+204
+00:09:03,540 --> 00:09:05,880
+facilement avec mongodb que nos commandes de script
+
+205
+00:09:05,880 --> 00:09:07,459
+avons  un rapide coup d'œil sur
+
+206
+00:09:07,459 --> 00:09:10,260
+mongoosejs.com ici, nous voyons un
+
+207
+00:09:10,260 --> 00:09:12,420
+exemple simple d'utilisation de Mongoose dans cet
+
+208
+00:09:12,420 --> 00:09:14,399
+exemple, nous voulons enregistrer un chat dans
+
+209
+00:09:14,399 --> 00:09:17,339
+la base de données, nous avons besoin d'un modèle pour cat et
+
+210
+00:09:17,339 --> 00:09:19,140
+ce chat doit avoir un schéma par exemple
+
+211
+00:09:19,140 --> 00:09:22,200
+un nom avec le type d'une chaîne puis  nous utilisons
+
+212
+00:09:22,200 --> 00:09:23,940
+ce modèle pour interagir avec la base de données,
+
+213
+00:09:23,940 --> 00:09:27,000
+copions ce modèle de discussion, allons dans notre
+
+214
+00:09:27,000 --> 00:09:29,519
+projet et créons notre modèle de livre,
+
+215
+00:09:29,519 --> 00:09:32,100
+créer un modèle dans index.js n'est pas une
+
+216
+00:09:32,100 --> 00:09:34,080
+bonne idée, il est préférable de toujours avoir une
+
+217
+00:09:34,080 --> 00:09:36,120
+structure de dossiers, créons un nouveau
+
+218
+00:09:36,120 --> 00:09:38,459
+dossier nommé  modèles dans ce dossier nous
+
+219
+00:09:38,459 --> 00:09:40,860
+gardons d'abord tous nos modèles de projet Je
+
+220
+00:09:40,860 --> 00:09:43,380
+colle le modèle de chat ici Je change son
+
+221
+00:09:43,380 --> 00:09:46,260
+nom en livre puis j'utilise des mots-clés d'exportation
+
+222
+00:09:46,260 --> 00:09:49,080
+pour pouvoir l'utiliser dans un autre fichier pour
+
+223
+00:09:49,080 --> 00:09:51,240
+un schéma ce livre a juste un nom mais que se passe-t-
+
+224
+00:09:51,240 --> 00:09:53,459
+il si vous  Si nous voulons avoir d'autres champs,
+
+225
+00:09:53,459 --> 00:09:55,320
+la meilleure approche est de créer un
+
+226
+00:09:55,320 --> 00:09:58,200
+schéma à l'extérieur et de l'utiliser. Ici, nous avons une
+
+227
+00:09:58,200 --> 00:10:00,060
+méthode de schéma de mangouste qui peut
+
+228
+00:10:00,060 --> 00:10:02,880
+nous aider, alors créons une variable de schéma de livre
+
+229
+00:10:02,880 --> 00:10:05,100
+et elle est égale à Mongoose ce
+
+230
+00:10:05,100 --> 00:10:07,800
+schéma et à l'intérieur de cela et nous pouvons
+
+231
+00:10:07,800 --> 00:10:10,680
+avoir un objet de champs et chaque objet
+
+232
+00:10:10,680 --> 00:10:13,560
+peut d'abord avoir quelques options. Je veux un titre
+
+233
+00:10:13,560 --> 00:10:15,839
+avec un type de chaîne et je veux qu'il soit
+
+234
+00:10:15,839 --> 00:10:19,080
+obligatoire, donc j'utilise le vrai requis,
+
+235
+00:10:19,080 --> 00:10:21,360
+copions-le et ayons à nouveau un auteur
+
+236
+00:10:21,360 --> 00:10:23,820
+avec un type de chaîne et exigeons-le à
+
+237
+00:10:23,820 --> 00:10:26,820
+nouveau deux  collez et ayez un flux d'éditeur,
+
+238
+00:10:26,820 --> 00:10:29,160
+ce champ a un type de numéro
+
+239
+00:10:29,160 --> 00:10:31,740
+et voilà, nous n'avons pas besoin d'identifiant car
+
+240
+00:10:31,740 --> 00:10:33,660
+l'identifiant sera géré automatiquement par
+
+241
+00:10:33,660 --> 00:10:36,240
+la base de données et vous verrez que nous pouvons
+
+242
+00:10:36,240 --> 00:10:38,519
+avoir d'autres champs pour les horodatages
+
+243
+00:10:38,519 --> 00:10:40,620
+comme l'heure de création et l'heure de  dernière
+
+244
+00:10:40,620 --> 00:10:42,779
+mise à jour afin de les avoir après l'
+
+245
+00:10:42,779 --> 00:10:45,360
+objet Fields, ayons un autre objet
+
+246
+00:10:45,360 --> 00:10:48,180
+et ajoutons des horodatages vrais et c'est tout
+
+247
+00:10:48,180 --> 00:10:50,519
+maintenant utilisons ce schéma de livre pour notre
+
+248
+00:10:50,519 --> 00:10:55,220
+modèle, le modèle de livre est maintenant prêt à être utilisé,
+
+249
+00:10:55,500 --> 00:10:58,440
+maintenant nous avons un modèle de livre et il est
+
+250
+00:10:58,440 --> 00:11:00,779
+temps de  créons notre premier livre, importons d'abord le
+
+251
+00:11:00,779 --> 00:11:03,060
+modèle de livre à partir de son dossier
+
+252
+00:11:03,060 --> 00:11:05,579
+pour créer et enregistrer un nouveau livre, nous avons
+
+253
+00:11:05,579 --> 00:11:08,100
+besoin d'une nouvelle route HTTP que nous tapons comme
+
+254
+00:11:08,100 --> 00:11:10,920
+méthode de publication est généralement utilisée pour créer une
+
+255
+00:11:10,920 --> 00:11:14,040
+nouvelle ressource, puis utilisons l'application express
+
+256
+00:11:14,040 --> 00:11:16,980
+et créons app.post le  le premier paramètre
+
+257
+00:11:16,980 --> 00:11:19,560
+est écrit donc j'utilise une barre oblique le
+
+258
+00:11:19,560 --> 00:11:21,480
+deuxième paramètre est une fonction de rappel
+
+259
+00:11:21,480 --> 00:11:23,820
+cette fonction reçoit une demande et
+
+260
+00:11:23,820 --> 00:11:25,560
+une réponse et est gérée
+
+261
+00:11:25,560 --> 00:11:27,600
+car travailler avec Mongoose est un
+
+262
+00:11:27,600 --> 00:11:30,180
+processus asynchrone, nous pouvons utiliser un
+
+263
+00:11:30,180 --> 00:11:32,160
+clavier asynchrone pour notre fonction de rappel J'utilise
+
+264
+00:11:32,160 --> 00:11:34,140
+également un blog try catch pour  gestion
+
+265
+00:11:34,140 --> 00:11:36,779
+du succès et de l'échec dans catch ci-dessous Je
+
+266
+00:11:36,779 --> 00:11:39,300
+reçois simplement l'erreur, puis j'enregistre cette
+
+267
+00:11:39,300 --> 00:11:41,820
+flèche sur la console du serveur, puis je
+
+268
+00:11:41,820 --> 00:11:44,279
+renvoie une réponse avec un statut de 500
+
+269
+00:11:44,279 --> 00:11:47,339
+et j'envoie un message d'erreur de lecture d'objet
+
+270
+00:11:47,339 --> 00:11:49,680
+dans le blog d'essai, faisons d'abord une
+
+271
+00:11:49,680 --> 00:11:51,660
+validation rapide pour notre  entrée qui vient
+
+272
+00:11:51,660 --> 00:11:54,360
+de request.body donc je vérifie que tous les
+
+273
+00:11:54,360 --> 00:11:56,399
+champs obligatoires sont dans le corps demandé
+
+274
+00:11:56,399 --> 00:11:58,980
+et s'ils ne le sont pas, je renvoie une réponse
+
+275
+00:11:58,980 --> 00:12:01,320
+avec un statut de 400 et j'envoie un
+
+276
+00:12:01,320 --> 00:12:04,079
+message au client, puis créons une
+
+277
+00:12:04,079 --> 00:12:05,940
+variable pour un nouveau livre et utilisons-la.  notre
+
+278
+00:12:05,940 --> 00:12:08,579
+corps de demande pour l'auteur et
+
+279
+00:12:08,579 --> 00:12:11,579
+l'éditeur du titre, appelons book.create
+
+280
+00:12:11,579 --> 00:12:13,680
+et envoyons-le pour un nouveau livre et
+
+281
+00:12:13,680 --> 00:12:16,260
+enregistrons le résultat dans une variable de livre et
+
+282
+00:12:16,260 --> 00:12:19,800
+enfin je renvoie un statu quo de 201 et
+
+283
+00:12:19,800 --> 00:12:22,320
+envoie un livre au client maintenant,
+
+284
+00:12:22,320 --> 00:12:24,899
+commençons le projet  avec npm, exécutez Dev et testez-
+
+285
+00:12:24,899 --> 00:12:27,660
+le pour tester une méthode de publication, nous ne pouvons pas
+
+286
+00:12:27,660 --> 00:12:30,779
+utiliser le navigateur, j'utilise donc Postman, c'est un
+
+287
+00:12:30,779 --> 00:12:33,120
+bon outil pour travailler avec les API Web pour
+
+288
+00:12:33,120 --> 00:12:35,160
+créer un nouveau livre avec Postman, ouvrons d'abord une
+
+289
+00:12:35,160 --> 00:12:37,920
+nouvelle requête, choisissons d'abord la
+
+290
+00:12:37,920 --> 00:12:40,920
+méthode HTTP qui est post, puis  collez votre URL
+
+291
+00:12:40,920 --> 00:12:43,680
+ici mon URL est un livre slash donc ce
+
+292
+00:12:43,680 --> 00:12:48,360
+serait HTTP localhost vos livres slash de port
+
+293
+00:12:48,360 --> 00:12:50,639
+alors nous devons envoyer le corps sur notre
+
+294
+00:12:50,639 --> 00:12:52,980
+route choisissons brut ici et ici
+
+295
+00:12:52,980 --> 00:12:55,860
+choisissez Json puis envoyez vos données en tant que
+
+296
+00:12:55,860 --> 00:12:58,920
+Json à notre serveur I  utilisez des données de test,
+
+297
+00:12:58,920 --> 00:13:01,260
+puis je clique sur le bouton Envoyer, nous
+
+298
+00:13:01,260 --> 00:13:03,300
+avons une erreur car le corps ne
+
+299
+00:13:03,300 --> 00:13:06,300
+reconnaît pas notre serveur, alors revenons
+
+300
+00:13:06,300 --> 00:13:08,880
+à index.js et ajoutons un
+
+301
+00:13:08,880 --> 00:13:10,920
+middleware pour analyser le corps de notre requête,
+
+302
+00:13:10,920 --> 00:13:13,440
+nous pouvons utiliser express.json et il
+
+303
+00:13:13,440 --> 00:13:16,440
+permettra aux experts d'utiliser le corps Json maintenant
+
+304
+00:13:16,440 --> 00:13:18,480
+revenons à Postman et testons à nouveau
+
+305
+00:13:18,480 --> 00:13:21,120
+J'envoie à nouveau mes données et cette fois vous
+
+306
+00:13:21,120 --> 00:13:23,399
+pouvez voir que le livre est créé et j'ai
+
+307
+00:13:23,399 --> 00:13:26,459
+le statut de 201 et le livre créé
+
+308
+00:13:26,459 --> 00:13:28,620
+également dans ce livre, vous pouvez voir  que j'ai
+
+309
+00:13:28,620 --> 00:13:32,779
+souligné l'ID et les horodatages,
+
+310
+00:13:33,360 --> 00:13:36,480
+nous avons créé un livre et il a été enregistré
+
+311
+00:13:36,480 --> 00:13:39,480
+avec succès dans la base de données, créons maintenant une
+
+312
+00:13:39,480 --> 00:13:41,700
+nouvelle ligne pour obtenir tous les livres de la base de données que
+
+313
+00:13:41,700 --> 00:13:44,339
+nous utilisons app.get car il s'agit d'une méthode d'obtention,
+
+314
+00:13:44,339 --> 00:13:46,800
+le routeur de cette méthode est
+
+315
+00:13:46,800 --> 00:13:49,079
+à nouveau une barre oblique  livres mais c'est différent
+
+316
+00:13:49,079 --> 00:13:51,300
+des routes précédentes qui étaient une
+
+317
+00:13:51,300 --> 00:13:53,399
+méthode de publication et c'est une méthode get et elles
+
+318
+00:13:53,399 --> 00:13:54,300
+sont
+
+319
+00:13:54,300 --> 00:13:56,579
+encore différentes, ayons une fonction de rappel asynchrone
+
+320
+00:13:56,579 --> 00:13:59,459
+pour gérer notre demande et lors de
+
+321
+00:13:59,459 --> 00:14:02,160
+la capture, je reçois le journal des erreurs dans la
+
+322
+00:14:02,160 --> 00:14:04,500
+console du serveur, puis je reviens  une
+
+323
+00:14:04,500 --> 00:14:06,899
+réponse avec un statut de 500 et le
+
+324
+00:14:06,899 --> 00:14:09,720
+message d'erreur puis dans le bloc try, j'utilise
+
+325
+00:14:09,720 --> 00:14:12,540
+book.find et je lui passe un objet vide pour
+
+326
+00:14:12,540 --> 00:14:15,300
+obtenir la liste de tous les livres de la base de données et
+
+327
+00:14:15,300 --> 00:14:17,820
+l'enregistrer dans une variable de livres, nous pouvons alors
+
+328
+00:14:17,820 --> 00:14:20,160
+renvoyer un statut de 200 et  envoyons des livres au
+
+329
+00:14:20,160 --> 00:14:22,560
+client, allons chez le facteur et
+
+330
+00:14:22,560 --> 00:14:25,019
+vérifions-le, créons donc une nouvelle demande
+
+331
+00:14:25,019 --> 00:14:27,540
+et choisissons obtenir notre méthode et tapons
+
+332
+00:14:27,540 --> 00:14:29,940
+l'URL. J'utilise l'URL précédente avec les
+
+333
+00:14:29,940 --> 00:14:31,860
+livres slash, puis cliquez sur le
+
+334
+00:14:31,860 --> 00:14:33,839
+bouton d'envoi pour voir le résultat,
+
+335
+00:14:33,839 --> 00:14:36,660
+puis nous  recevez la liste des livres sous forme de
+
+336
+00:14:36,660 --> 00:14:39,540
+tableau et le statut est 200. c'est bien
+
+337
+00:14:39,540 --> 00:14:41,940
+mais obtenons un meilleur résultat pour cet
+
+338
+00:14:41,940 --> 00:14:44,639
+itinéraire donc je veux avoir une forme pour cette
+
+339
+00:14:44,639 --> 00:14:47,160
+sortie, revenons à ses lignes et
+
+340
+00:14:47,160 --> 00:14:49,980
+au lieu d'envoyer uniquement les livres
+
+341
+00:14:49,980 --> 00:14:52,560
+créons  un nouvel objet et dans cet objet je
+
+342
+00:14:52,560 --> 00:14:55,260
+veux envoyer deux valeurs de compte qui
+
+343
+00:14:55,260 --> 00:14:57,779
+seraient les livres qui atterrissent et les données
+
+344
+00:14:57,779 --> 00:15:00,300
+qui seraient nos livres maintenant
+
+345
+00:15:00,300 --> 00:15:03,000
+revenons à nouveau à l'anthèse du facteur
+
+346
+00:15:03,000 --> 00:15:05,459
+et c'est tout vous pouvez voir que non j'ai
+
+347
+00:15:05,459 --> 00:15:09,680
+une meilleure structure pour  mes données,
+
+348
+00:15:10,620 --> 00:15:13,500
+nous avons créé une route HTTP pour obtenir tous
+
+349
+00:15:13,500 --> 00:15:15,839
+les livres, mais disons que nous voulons avoir
+
+350
+00:15:15,839 --> 00:15:18,240
+une autre route pour voir les détails d'un seul
+
+351
+00:15:18,240 --> 00:15:20,880
+livre comme autre exemple si vous avez une
+
+352
+00:15:20,880 --> 00:15:23,040
+liste de produits, vous souhaiterez peut-être montrer
+
+353
+00:15:23,040 --> 00:15:25,199
+les détails du produit au client, vous
+
+354
+00:15:25,199 --> 00:15:27,180
+pouvez  envoyez l'idée de ce produit au
+
+355
+00:15:27,180 --> 00:15:29,279
+serveur et demandez les détails, faisons-
+
+356
+00:15:29,279 --> 00:15:31,860
+le parce que cette méthode est comme obtenir tous les
+
+357
+00:15:31,860 --> 00:15:34,079
+livres. Je copie et colle simplement cette
+
+358
+00:15:34,079 --> 00:15:36,959
+méthode et la modifie bien. Cette photo est
+
+359
+00:15:36,959 --> 00:15:39,420
+pour obtenir un livre de la base de données par ID,
+
+360
+00:15:39,420 --> 00:15:42,480
+la méthode est  encore une fois, mais sur la route, nous
+
+361
+00:15:42,480 --> 00:15:44,699
+devons recevoir un identifiant afin de marquer
+
+362
+00:15:44,699 --> 00:15:47,519
+et de paramétrer les routes pour utiliser les deux points afin que
+
+363
+00:15:47,519 --> 00:15:50,579
+la route soit des livres avec une barre oblique de l'ID du côlon
+
+364
+00:15:50,579 --> 00:15:53,100
+et nous avons besoin de cet identifiant pour rechercher dans
+
+365
+00:15:53,100 --> 00:15:55,820
+la base de données, alors désdétruisons-le de
+
+366
+00:15:55,820 --> 00:15:59,339
+request.parents  puis utilisez book.find par ID
+
+367
+00:15:59,339 --> 00:16:02,040
+et envoyez cet ID et le nom du retour
+
+368
+00:16:02,040 --> 00:16:04,920
+sera book et nous renvoyons ce livre
+
+369
+00:16:04,920 --> 00:16:07,800
+au client maintenant, vérifions-le dans Postman,
+
+370
+00:16:07,800 --> 00:16:11,040
+créons une nouvelle requête et utilisons get
+
+371
+00:16:11,040 --> 00:16:12,839
+pour sa méthode,
+
+372
+00:16:12,839 --> 00:16:15,420
+la première partie de l'URL est  pareil que la
+
+373
+00:16:15,420 --> 00:16:18,360
+liste des livres mais nous avons besoin d'un identifiant, alors
+
+374
+00:16:18,360 --> 00:16:21,360
+copions un identifiant de la liste des livres et collons-
+
+375
+00:16:21,360 --> 00:16:25,500
+le dans l'URL, puis envoyons notre demande,
+
+376
+00:16:25,500 --> 00:16:28,199
+cela fonctionne et nous recevons le
+
+377
+00:16:28,199 --> 00:16:31,160
+livre demandé
+
+378
+00:16:31,560 --> 00:16:34,380
+maintenant, il est temps de mettre à jour un livre et
+
+379
+00:16:34,380 --> 00:16:36,420
+la mise à jour est  un peu délicat car nous avons
+
+380
+00:16:36,420 --> 00:16:38,759
+besoin à la fois des paramètres demandés et de
+
+381
+00:16:38,759 --> 00:16:41,519
+ce corps. En fait, nous avons besoin d'un panneau d'identification pour
+
+382
+00:16:41,519 --> 00:16:43,980
+trouver le livre dans la base de données, puis nous
+
+383
+00:16:43,980 --> 00:16:46,199
+devons demander à ce corps de le mettre à jour, alors
+
+384
+00:16:46,199 --> 00:16:48,480
+implémentons-le, nous avons besoin d'une nouvelle route
+
+385
+00:16:48,480 --> 00:16:51,000
+pour le démarrage mis à jour cette fois.  nous devons
+
+386
+00:16:51,000 --> 00:16:53,459
+utiliser après la sortie car nous utilisons la
+
+387
+00:16:53,459 --> 00:16:56,220
+méthode put pour mettre à jour une ressource, donc la route
+
+388
+00:16:56,220 --> 00:16:58,980
+doit être une barre oblique, un identifiant de deux-points
+
+389
+00:16:58,980 --> 00:17:01,019
+et nous avons une fonction de rappel asynchrone
+
+390
+00:17:01,019 --> 00:17:03,720
+avec un essai de capture à nouveau dans le cache, nous
+
+391
+00:17:03,720 --> 00:17:05,640
+recevons l'erreur et l'enregistrons d'abord
+
+392
+00:17:05,640 --> 00:17:08,099
+la console du serveur renvoie ensuite une
+
+393
+00:17:08,099 --> 00:17:09,900
+réponse avec la surface de 500 et un
+
+394
+00:17:09,900 --> 00:17:13,199
+message d'erreur dans le bloc try faisons d'abord
+
+395
+00:17:13,199 --> 00:17:16,140
+une validation, nous vérifions l'auteur
+
+396
+00:17:16,140 --> 00:17:18,059
+et l'éditeur du titre et si l'un d'eux
+
+397
+00:17:18,059 --> 00:17:20,040
+manque le retour et la réponse avec le
+
+398
+00:17:20,040 --> 00:17:23,040
+statut de 400 et un message puis avec
+
+399
+00:17:23,040 --> 00:17:24,319
+cette structure l'idfirm
+
+400
+00:17:24,319 --> 00:17:26,880
+request.parents cette fois je ne crée pas
+
+401
+00:17:26,880 --> 00:17:29,280
+de nouvelle variable comme la méthode de publication HTTP pour
+
+402
+00:17:29,280 --> 00:17:32,520
+créer un livre J'utilise book Dot trouver mon identifiant
+
+403
+00:17:32,520 --> 00:17:34,620
+et mettre à jour et transmettre les idées en premier
+
+404
+00:17:34,620 --> 00:17:37,020
+paramètre et demander ce corps comme
+
+405
+00:17:37,020 --> 00:17:39,419
+deuxième paramètre et j'enregistre le  résultat
+
+406
+00:17:39,419 --> 00:17:42,000
+dans une variable alors nous pouvons vérifier le
+
+407
+00:17:42,000 --> 00:17:44,400
+résultat si le résultat est faux nous renvoyons
+
+408
+00:17:44,400 --> 00:17:48,419
+un statut de 404 avec un message sinon nous
+
+409
+00:17:48,419 --> 00:17:51,419
+renvoyons un statut de 200 avec un message
+
+410
+00:17:51,419 --> 00:17:54,120
+J'utilise n'importe quel message que vous voulez non allons
+
+411
+00:17:54,120 --> 00:17:56,220
+chez le facteur et testons-le je
+
+412
+00:17:56,220 --> 00:17:59,100
+créer une nouvelle requête la
+
+413
+00:17:59,100 --> 00:18:02,760
+méthode de requête est mise l'URL est l'ID de la barre oblique du livre,
+
+414
+00:18:02,760 --> 00:18:05,520
+copions donc un ID de livre
+
+415
+00:18:05,520 --> 00:18:08,280
+Corps de 10 minutes nous avons précédemment envoyé un corps
+
+416
+00:18:08,280 --> 00:18:10,620
+sur la création d'un livre donc maintenant vous
+
+417
+00:18:10,620 --> 00:18:13,380
+le connaissez Je mets des données aléatoires
+
+418
+00:18:13,380 --> 00:18:16,799
+ici puis j'appuie  envoyez et si vous
+
+419
+00:18:16,799 --> 00:18:18,840
+voyez notre message de réussite, cela signifie que
+
+420
+00:18:18,840 --> 00:18:21,539
+tout fonctionne bien et vous pouvez simplement
+
+421
+00:18:21,539 --> 00:18:24,240
+aller vérifier ce livre pour voir s'il est
+
+422
+00:18:24,240 --> 00:18:28,320
+mis à jour ou non et aussi Testons une
+
+423
+00:18:28,320 --> 00:18:30,600
+idée invalide et vérifions à nouveau le résultat
+
+424
+00:18:30,600 --> 00:18:34,260
+donc avec un identifiant invalide, nous le ferons  recevons-en 404,
+
+425
+00:18:34,260 --> 00:18:37,160
+c'est un message
+
+426
+00:18:38,600 --> 00:18:42,179
+maintenant, supprimons un quatrième livre en éditant un
+
+427
+00:18:42,179 --> 00:18:44,700
+livre, nous avons juste besoin de son identifiant et nous n'avons pas
+
+428
+00:18:44,700 --> 00:18:47,640
+besoin de corps, alors implémentons-le, nous avons besoin
+
+429
+00:18:47,640 --> 00:18:50,340
+d'une nouvelle route pour supprimer un livre, la quatrième
+
+430
+00:18:50,340 --> 00:18:53,280
+méthode que nous utilisons après la suppression, la méthode de suppression
+
+431
+00:18:53,280 --> 00:18:55,679
+est la  méthode HTTP standard pour supprimer une
+
+432
+00:18:55,679 --> 00:18:58,919
+ressource pour la route, nous utilisons une barre oblique, livres un
+
+433
+00:18:58,919 --> 00:19:02,460
+ID de deux points slash, nous avons à nouveau une
+
+434
+00:19:02,460 --> 00:19:04,679
+fonction de rappel asynchrone, puis essayons d'attraper les
+
+435
+00:19:04,679 --> 00:19:07,559
+blocs dans le cache, nous recevrons d'abord l'erreur,
+
+436
+00:19:07,559 --> 00:19:10,440
+je me connecte à la console du serveur, puis
+
+437
+00:19:10,440 --> 00:19:13,140
+je renvoie une réponse.  avec un statut de 500
+
+438
+00:19:13,140 --> 00:19:15,900
+et un message d'erreur, allons maintenant à la
+
+439
+00:19:15,900 --> 00:19:17,039
+tribu comme
+
+440
+00:19:17,039 --> 00:19:19,380
+ID structure l'ID de la demande de
+
+441
+00:19:19,380 --> 00:19:22,799
+paramètres, puis j'utilise le point de livre trouver par ID
+
+442
+00:19:22,799 --> 00:19:26,340
+et supprimer et ID de livret et je
+
+443
+00:19:26,340 --> 00:19:28,700
+dis le résultat dans un résultat de nom de variable
+
+444
+00:19:28,700 --> 00:19:32,100
+puis je  vérifiez le résultat si le résultat est
+
+445
+00:19:32,100 --> 00:19:35,340
+faux je renvoie un statut de 404 avec un
+
+446
+00:19:35,340 --> 00:19:38,039
+message d'erreur sinon je renvoie un statut de
+
+447
+00:19:38,039 --> 00:19:40,919
+200 avec un message de réussite vous pouvez utiliser
+
+448
+00:19:40,919 --> 00:19:43,740
+n'importe quel message comme vous le souhaitez maintenant allons chez
+
+449
+00:19:43,740 --> 00:19:47,280
+le facteur et testons notre nouvelle route HTTP
+
+450
+00:19:47,280 --> 00:19:50,580
+I  je dois créer une nouvelle requête, la
+
+451
+00:19:50,580 --> 00:19:53,460
+méthode de requête est supprimer, l'URL est à nouveau comme
+
+452
+00:19:53,460 --> 00:19:56,460
+la mise à jour, copions donc un identifiant de livre et
+
+453
+00:19:56,460 --> 00:19:57,840
+utilisons-le ici
+
+454
+00:19:57,840 --> 00:20:00,960
+et je n'ai pas besoin de corps, je clique donc simplement sur
+
+455
+00:20:00,960 --> 00:20:03,840
+Envoyer pour voir le résultat et si vous voyez
+
+456
+00:20:03,840 --> 00:20:05,820
+notre message de réussite  cela signifie que
+
+457
+00:20:05,820 --> 00:20:07,860
+tout fonctionne bien et que notre livre a bien été
+
+458
+00:20:07,860 --> 00:20:11,299
+supprimé,
+
+459
+00:20:11,520 --> 00:20:15,419
+nous avons créé nos routes HTTP,
+
+460
+00:20:15,419 --> 00:20:16,860
+refactorisons-les maintenant pour avoir une meilleure
+
+461
+00:20:16,860 --> 00:20:20,039
+application, notre application est correcte, mais
+
+462
+00:20:20,039 --> 00:20:21,900
+que se passe-t-il si nous avons plus d'un modèle,
+
+463
+00:20:21,900 --> 00:20:24,840
+disons que nous avons huit modèles et pour
+
+464
+00:20:24,840 --> 00:20:27,600
+chaque modèle, vous  besoin de cinq lignes alors nous
+
+465
+00:20:27,600 --> 00:20:31,320
+devons créer 40 lignes HTTP dans index.js est-
+
+466
+00:20:31,320 --> 00:20:33,720
+ce bon non ce n'est pas une bonne solution
+
+467
+00:20:33,720 --> 00:20:36,299
+nous essayons toujours d'utiliser le handicap du code et
+
+468
+00:20:36,299 --> 00:20:38,520
+les structures de dossiers comme ce que nous avons fait pour
+
+469
+00:20:38,520 --> 00:20:41,400
+nos modèles dans cette situation, nous pouvons utiliser
+
+470
+00:20:41,400 --> 00:20:44,940
+un routeur express  faisons cela d'abord,
+
+471
+00:20:44,940 --> 00:20:47,820
+coupons toutes nos routes HTTP qui gèrent
+
+472
+00:20:47,820 --> 00:20:50,160
+les livres,
+
+473
+00:20:50,160 --> 00:20:53,039
+puis nous devons créer un nouveau dossier nommé
+
+474
+00:20:53,039 --> 00:20:54,059
+routes
+
+475
+00:20:54,059 --> 00:20:56,880
+à l'intérieur duquel nous avons créé un fichier pour chaque
+
+476
+00:20:56,880 --> 00:21:01,440
+modèle, créons une route de livres pour l'instant
+
+477
+00:21:01,440 --> 00:21:04,440
+et je colle les routes HTTP et
+
+478
+00:21:04,440 --> 00:21:08,900
+les minimises toutes pour les voir  mieux dans ce fichier,
+
+479
+00:21:09,620 --> 00:21:12,960
+nous avons besoin d'un routeur Express, alors importons
+
+480
+00:21:12,960 --> 00:21:16,140
+Express depuis Express, puis je définis une
+
+481
+00:21:16,140 --> 00:21:18,419
+variable nommée routeur à exprimer,
+
+482
+00:21:18,419 --> 00:21:21,240
+puis au lieu de l'application, vous pouvez utiliser
+
+483
+00:21:21,240 --> 00:21:23,340
+ce routeur, donc modifions toutes les
+
+484
+00:21:23,340 --> 00:21:26,940
+applications avec le routeur et enfin j'exporte
+
+485
+00:21:26,940 --> 00:21:30,480
+ce routeur en tant que  une exportation par défaut,
+
+486
+00:21:30,480 --> 00:21:33,419
+nous utilisons également le modèle de livre, donc
+
+487
+00:21:33,419 --> 00:21:36,320
+importons le livre dans ce fichier, l'
+
+488
+00:21:36,320 --> 00:21:39,600
+étape suivante consiste à les utiliser dans index.js comme
+
+489
+00:21:39,600 --> 00:21:42,720
+middleware, allons donc à index.js et
+
+490
+00:21:42,720 --> 00:21:45,299
+importons des nuages ​​​​de livres depuis sa route,
+
+491
+00:21:45,299 --> 00:21:47,580
+puis nous utilisons un middleware pour un  slash
+
+492
+00:21:47,580 --> 00:21:50,400
+books et nous pouvons y transmettre la route des livres,
+
+493
+00:21:50,400 --> 00:21:52,799
+cela dira que pour chaque
+
+494
+00:21:52,799 --> 00:21:55,440
+demande avec préfixe de ports, nous les traitons
+
+495
+00:21:55,440 --> 00:21:58,260
+avec ce middleware et à cause de cela,
+
+496
+00:21:58,260 --> 00:22:01,320
+nous devons changer nos routes donc
+
+497
+00:22:01,320 --> 00:22:04,440
+revenons à la route des livres ici, les slash
+
+498
+00:22:04,440 --> 00:22:06,480
+books sont redondants  et nous n'en avons pas besoin,
+
+499
+00:22:06,480 --> 00:22:08,580
+alors supprimons-les pour pouvoir
+
+500
+00:22:08,580 --> 00:22:10,559
+travailler avec notre middleware,
+
+501
+00:22:10,559 --> 00:22:13,440
+allons maintenant chez Postman et vérifions à
+
+502
+00:22:13,440 --> 00:22:14,700
+nouveau notre serveur.
+
+503
+00:22:14,700 --> 00:22:17,100
+J'envoie la demande pour obtenir la liste des livres et
+
+504
+00:22:17,100 --> 00:22:18,720
+vous pouvez voir que tout fonctionne
+
+505
+00:22:18,720 --> 00:22:21,900
+et qu'ils vont bien, donc  Je vais refactoriser
+
+506
+00:22:21,900 --> 00:22:24,860
+fonctionne correctement
+
+507
+00:22:25,460 --> 00:22:28,620
+nous avons refactorisé notre serveur et cela
+
+508
+00:22:28,620 --> 00:22:31,200
+fonctionne bien nous avons testé nos routes HTTP
+
+509
+00:22:31,200 --> 00:22:33,659
+avec Postman et ils travaillent maintenant
+
+510
+00:22:33,659 --> 00:22:35,280
+parlons de l'un des
+
+511
+00:22:35,280 --> 00:22:37,080
+sujets les plus importants de la
+
+512
+00:22:37,080 --> 00:22:39,659
+politique des cours de développement Web afin d'avoir une meilleure
+
+513
+00:22:39,659 --> 00:22:42,600
+compréhension de  Voyons-le d'abord dans un
+
+514
+00:22:42,600 --> 00:22:45,120
+exemple réel sur Postman et projet de réaction
+
+515
+00:22:45,120 --> 00:22:46,200
+
+
+516
+00:22:46,200 --> 00:22:48,480
+dans Postman J'envoie une requête au
+
+517
+00:22:48,480 --> 00:22:50,340
+serveur et j'ai reçu la réponse
+
+518
+00:22:50,340 --> 00:22:52,500
+sans aucun problème c'est bien maintenant
+
+519
+00:22:52,500 --> 00:22:54,960
+vérifions-le dans un projet de réaction
+
+520
+00:22:54,960 --> 00:22:57,480
+J'ai créé un projet de réaction simple et
+
+521
+00:22:57,480 --> 00:22:59,159
+ici  vous pouvez voir que j'envoie une
+
+522
+00:22:59,159 --> 00:23:01,440
+simple requête à notre serveur pour obtenir la
+
+523
+00:23:01,440 --> 00:23:03,780
+liste des livres, puis l'enregistrer sur la
+
+524
+00:23:03,780 --> 00:23:06,059
+console du serveur. Allons dans le navigateur
+
+525
+00:23:06,059 --> 00:23:09,480
+et vérifions-le ici. J'ouvre les outils de développement
+
+526
+00:23:09,480 --> 00:23:12,120
+et l'onglet console puis j'actualise ma page pour
+
+527
+00:23:12,120 --> 00:23:14,400
+voir une nouvelle demande maintenant vous pouvez voir
+
+528
+00:23:14,400 --> 00:23:17,520
+cette erreur l'accès à la demande HTTP XML
+
+529
+00:23:17,520 --> 00:23:19,620
+ajoute cette adresse de l'origine de
+
+530
+00:23:19,620 --> 00:23:22,080
+localhost 3000 a été bloquée par la
+
+531
+00:23:22,080 --> 00:23:24,720
+politique du cours aucun contrôle d'accès autorise l'
+
+532
+00:23:24,720 --> 00:23:26,880
+en-tête d'origine est présent sous la
+
+533
+00:23:26,880 --> 00:23:29,400
+ressource demandée eh bien, c'est l'erreur de politique de cours que
+
+534
+00:23:29,400 --> 00:23:31,919
+représente le cours  Le
+
+535
+00:23:31,919 --> 00:23:33,960
+partage de ressources d'origine croisée est un mécanisme de sécurité
+
+536
+00:23:33,960 --> 00:23:36,299
+dans les navigateurs qui restreint
+
+537
+00:23:36,299 --> 00:23:38,100
+la capacité d'une page Web à effectuer
+
+538
+00:23:38,100 --> 00:23:40,440
+des requêtes vers un domaine différent. En fait, la
+
+539
+00:23:40,440 --> 00:23:42,179
+politique de cours est un mécanisme de sécurité Web
+
+540
+00:23:42,179 --> 00:23:44,340
+qui empêche l'accès non autorisé d'
+
+541
+00:23:44,340 --> 00:23:46,860
+origine croisée à une ressource ou à un
+
+542
+00:23:46,860 --> 00:23:49,020
+serveur lorsque  une page Web fait une requête
+
+543
+00:23:49,020 --> 00:23:51,299
+à un domaine différent le navigateur envoie
+
+544
+00:23:51,299 --> 00:23:53,280
+une requête au serveur cible le
+
+545
+00:23:53,280 --> 00:23:54,780
+serveur vérifiera que si la
+
+546
+00:23:54,780 --> 00:23:57,299
+requête est autorisée ou non, le serveur peut
+
+547
+00:23:57,299 --> 00:24:00,059
+vérifier les méthodes et les en-têtes Origins et
+
+548
+00:24:00,059 --> 00:24:02,460
+autoriser ou refuser la requête et c'est ce qui
+
+549
+00:24:02,460 --> 00:24:04,919
+s'est passé dans  notre exemple de réaction mais
+
+550
+00:24:04,919 --> 00:24:07,679
+comment nous pouvons bien le réparer, c'est trop facile dans
+
+551
+00:24:07,679 --> 00:24:10,260
+node.js retournons à notre serveur et
+
+552
+00:24:10,260 --> 00:24:12,720
+gérons la politique de cours pour gérer les erreurs de cours,
+
+553
+00:24:12,720 --> 00:24:14,580
+vous devez installer un nouveau package,
+
+554
+00:24:14,580 --> 00:24:18,059
+ouvrons notre terminal et tapons le
+
+555
+00:24:18,059 --> 00:24:20,580
+cours PMI après cela  J'importe le cours dans
+
+556
+00:24:20,580 --> 00:24:22,860
+index.js et il doit être utilisé comme
+
+557
+00:24:22,860 --> 00:24:25,260
+middleware nous avons deux options différentes
+
+558
+00:24:25,260 --> 00:24:27,659
+pour l'utiliser en premier nous pouvons utiliser uniquement le cours
+
+559
+00:24:27,659 --> 00:24:30,720
+avec des parenthèses de cette façon nous avons une
+
+560
+00:24:30,720 --> 00:24:32,580
+valeur par défaut d'une étoile qui permet
+
+561
+00:24:32,580 --> 00:24:35,220
+tout maintenant revenons à  navigateur
+
+562
+00:24:35,220 --> 00:24:38,100
+et testez-le. J'actualise ma page et j'attends
+
+563
+00:24:38,100 --> 00:24:40,140
+le résultat et vous pouvez voir que je
+
+564
+00:24:40,140 --> 00:24:42,059
+reçois une réponse du serveur sans
+
+565
+00:24:42,059 --> 00:24:44,700
+aucune erreur. Bon, retournons au serveur
+
+566
+00:24:44,700 --> 00:24:47,340
+et testons une autre option. La deuxième option est
+
+567
+00:24:47,340 --> 00:24:49,380
+d'autoriser les origines personnalisées, c'est mieux.  de cette
+
+568
+00:24:49,380 --> 00:24:51,419
+façon, parce que nous avons plus de contrôle sur lui,
+
+569
+00:24:51,419 --> 00:24:54,120
+nous pouvons utiliser un objet en cours
+
+570
+00:24:54,120 --> 00:24:57,480
+dans cet objet, nous pouvons utiliser les méthodes d'origine
+
+571
+00:24:57,480 --> 00:25:00,179
+et les en-têtes autorisés, donc pour l'origine, nous pouvons
+
+572
+00:25:00,179 --> 00:25:03,480
+utiliser HTTP localhost 3000 pour les méthodes que nous
+
+573
+00:25:03,480 --> 00:25:06,419
+pouvons utiliser get post put et delete pour les
+
+574
+00:25:06,419 --> 00:25:08,640
+en-têtes autorisés  nous pouvons utiliser le type de contenu
+
+575
+00:25:08,640 --> 00:25:11,400
+et c'est tout non seulement les clients avec
+
+576
+00:25:11,400 --> 00:25:13,860
+cette origine peuvent accéder à notre serveur
+
+577
+00:25:13,860 --> 00:25:17,100
+revenons au navigateur et vérifions-le encore
+
+578
+00:25:17,100 --> 00:25:19,799
+une fois nous avons accès à notre serveur
+
+579
+00:25:19,799 --> 00:25:23,480
+sans aucune erreur de cours
+
+580
+00:25:23,480 --> 00:25:27,000
+et bien nous avons créé notre serveur maintenant il est temps
+
+581
+00:25:27,000 --> 00:25:28,860
+de créer  notre projet front-end avec
+
+582
+00:25:28,860 --> 00:25:31,080
+React il existe différentes solutions pour
+
+583
+00:25:31,080 --> 00:25:33,179
+créer un nouveau projet React beaucoup de
+
+584
+00:25:33,179 --> 00:25:36,179
+tutoriels utilisent CRA ou créent un package
+
+585
+00:25:36,179 --> 00:25:38,340
+et ce n'est pas mal mais nous avons une meilleure
+
+586
+00:25:38,340 --> 00:25:41,279
+solution avec Wheat est un outil de construction qui
+
+587
+00:25:41,279 --> 00:25:43,679
+fonctionne mieux que CRA  utilisez-le et
+
+588
+00:25:43,679 --> 00:25:45,360
+créez un nouveau projet React à l'aide du
+
+589
+00:25:45,360 --> 00:25:47,760
+terminal d'exportation, supprimez d'abord ce
+
+590
+00:25:47,760 --> 00:25:49,860
+dossier frontal, c'était juste pour montrer
+
+591
+00:25:49,860 --> 00:25:52,380
+que nous avons un autre projet, assurez-vous maintenant
+
+592
+00:25:52,380 --> 00:25:54,360
+que vous êtes sur le dossier principal et
+
+593
+00:25:54,360 --> 00:25:59,100
+tapez npm create Veet au plus tard si vous
+
+594
+00:25:59,100 --> 00:26:01,140
+ne le faites pas.  Si vous avez la dernière version de Wheat, il
+
+595
+00:26:01,140 --> 00:26:03,600
+vous demandera de l'installer, vous
+
+596
+00:26:03,600 --> 00:26:05,279
+devez alors taper le nom de votre projet, par
+
+597
+00:26:05,279 --> 00:26:08,820
+exemple étage 10, puis sélectionner React,
+
+598
+00:26:08,820 --> 00:26:11,880
+puis sélectionner JavaScript et c'est tout.
+
+599
+00:26:11,880 --> 00:26:14,460
+Votre nouveau projet React est prêt. Maintenant,
+
+600
+00:26:14,460 --> 00:26:17,039
+changez votre répertoire par cette commande CD
+
+601
+00:26:17,039 --> 00:26:20,820
+front-end.  puis tapez npmi pour installer le package npn,
+
+602
+00:26:20,820 --> 00:26:22,080
+
+
+603
+00:26:22,080 --> 00:26:24,900
+après cela, ajoutons le CSS défaillant à notre
+
+604
+00:26:24,900 --> 00:26:25,760
+projet
+
+605
+00:26:25,760 --> 00:26:28,500
+opentylink site Web et commençons
+
+606
+00:26:28,500 --> 00:26:31,799
+puis sur le guide du framework, choisissez Veet, nous
+
+607
+00:26:31,799 --> 00:26:34,020
+avons déjà fait une première étape, alors passons
+
+608
+00:26:34,020 --> 00:26:36,539
+à l'étape 2, copiez cette commande et exécutez-la
+
+609
+00:26:36,539 --> 00:26:39,120
+dans votre  terminal npm install Dash
+
+610
+00:26:39,120 --> 00:26:42,000
+détaillant CSS pour le préfixe automatique CSS,
+
+611
+00:26:42,000 --> 00:26:44,940
+après cela, copiez la commande suivante et exécutez-
+
+612
+00:26:44,940 --> 00:26:48,480
+la. Style NP CSS init Dashboard. Cette
+
+613
+00:26:48,480 --> 00:26:50,220
+commande crée deux fichiers pour vous,
+
+614
+00:26:50,220 --> 00:26:53,580
+queue de configuration et publication de la configuration CSS, puis copiez
+
+615
+00:26:53,580 --> 00:26:56,340
+ce contenu et collez-le dans le tableau
+
+616
+00:26:56,340 --> 00:26:59,580
+et la configuration, puis copiez.  ces trois lignes
+
+617
+00:26:59,580 --> 00:27:02,700
+vont dans index.css et supprimez tout
+
+618
+00:27:02,700 --> 00:27:05,880
+et collez-les puis supprimez app.css
+
+619
+00:27:05,880 --> 00:27:08,640
+car nous n'en avons plus besoin puis allez
+
+620
+00:27:08,640 --> 00:27:11,580
+dans app.js6 et supprimez tout et
+
+621
+00:27:11,580 --> 00:27:14,820
+créez un nouveau composant en utilisant rafc
+
+622
+00:27:14,820 --> 00:27:18,000
+J'utilise un nom d'extension  es7 plus laissez-moi
+
+623
+00:27:18,000 --> 00:27:20,580
+vous montrer que cette extension me permet
+
+624
+00:27:20,580 --> 00:27:23,940
+d'utiliser rafc pour créer de nouveaux composants,
+
+625
+00:27:23,940 --> 00:27:26,039
+utilisons maintenant quelques classes de sauvegarde pour nous
+
+626
+00:27:26,039 --> 00:27:28,860
+assurer que nos codes sont corrects, par exemple un
+
+627
+00:27:28,860 --> 00:27:32,340
+taux PG de 400 et du texte blanc, exécutons maintenant
+
+628
+00:27:32,340 --> 00:27:34,799
+notre projet en utilisant npm run Dev pour  voyez-le
+
+629
+00:27:34,799 --> 00:27:37,380
+bien, il semble que tout fonctionne bien
+
+630
+00:27:37,380 --> 00:27:39,900
+maintenant, nous avons un projet React prêt à l'emploi
+
+631
+00:27:39,900 --> 00:27:43,100
+avec du CSS quotidien
+
+632
+00:27:43,700 --> 00:27:47,039
+maintenant nous avons notre projet React, nous voulons
+
+633
+00:27:47,039 --> 00:27:49,799
+avoir une application d'une seule page ou Spa afin que
+
+634
+00:27:49,799 --> 00:27:51,900
+notre application ne soit pas actualisée
+
+635
+00:27:51,900 --> 00:27:53,940
+lors du changement de page, nous ne le faisons pas.  Je n'ai pas cette
+
+636
+00:27:53,940 --> 00:27:56,580
+fonctionnalité dans React lui-même, nous devons donc
+
+637
+00:27:56,580 --> 00:27:58,620
+installer un nouveau package, ouvrons
+
+638
+00:27:58,620 --> 00:28:00,539
+Terminal et assurons-nous d'être sur le
+
+639
+00:28:00,539 --> 00:28:04,500
+projet frontal et tapez npm Je réagis
+
+640
+00:28:04,500 --> 00:28:07,260
+routeur, nous avons alors besoin d'une configuration
+
+641
+00:28:07,260 --> 00:28:11,640
+pour cela, allons à main.jss ici dont nous avons besoin
+
+642
+00:28:11,640 --> 00:28:13,500
+pour importer du réacteur vers le Dom le
+
+643
+00:28:13,500 --> 00:28:16,559
+routeur du navigateur, puis utilisez-le et transmettez-
+
+644
+00:28:16,559 --> 00:28:19,140
+lui les composants de l'application en tant qu'enfants, c'est
+
+645
+00:28:19,140 --> 00:28:21,900
+tout maintenant, nous avons accès au
+
+646
+00:28:21,900 --> 00:28:24,419
+routeur de réaction maintenant sur l'ensemble de notre projet,
+
+647
+00:28:24,419 --> 00:28:27,840
+allons maintenant à app.j6 ici d'abord,
+
+648
+00:28:27,840 --> 00:28:30,600
+réagissez important, faites-les pivoter  deux choses, routes et
+
+649
+00:28:30,600 --> 00:28:32,940
+itinéraires, puis dans la section de retour de notre
+
+650
+00:28:32,940 --> 00:28:35,400
+composant, nous renvoyons ces itinéraires à l'intérieur,
+
+651
+00:28:35,400 --> 00:28:38,159
+nous pouvons avoir des itinéraires différents pour
+
+652
+00:28:38,159 --> 00:28:40,860
+chaque route dont nous avons besoin, chemin et élément,
+
+653
+00:28:40,860 --> 00:28:42,779
+créons donc cinq lignes pour cinq
+
+654
+00:28:42,779 --> 00:28:44,880
+pages différentes et je créerai cet
+
+655
+00:28:44,880 --> 00:28:47,220
+espace à utiliser  Ici, créons un nouveau
+
+656
+00:28:47,220 --> 00:28:50,640
+dossier dans SRC et nommons-le comme page et
+
+657
+00:28:50,640 --> 00:28:52,320
+à l'intérieur, créons cinq
+
+658
+00:28:52,320 --> 00:28:54,360
+composants différents et utilisons-les comme
+
+659
+00:28:54,360 --> 00:28:58,740
+base d'application un createbook.jsys
+
+660
+00:28:58,740 --> 00:29:01,860
+pour supprimer book.jsies
+
+661
+00:29:01,860 --> 00:29:05,039
+trois éditer book.jsx
+
+662
+00:29:05,039 --> 00:29:11,100
+pour home.j6 et 5 Showbox à  j6
+
+663
+00:29:11,100 --> 00:29:14,220
+c'est tout maintenant, revenons à après GSX
+
+664
+00:29:14,220 --> 00:29:16,860
+et nous devons d'abord les importer un par
+
+665
+00:29:16,860 --> 00:29:20,279
+un, donc importons home créer watch
+
+666
+00:29:20,279 --> 00:29:24,480
+show watch edit book delete book maintenant
+
+667
+00:29:24,480 --> 00:29:27,659
+utilisons-les dans nos lignes une barre oblique va
+
+668
+00:29:27,659 --> 00:29:30,360
+au composant d'accueil une barre oblique livres barre oblique
+
+669
+00:29:30,360 --> 00:29:33,600
+créer  va créer un composant de livre une barre
+
+670
+00:29:33,600 --> 00:29:36,539
+oblique livres détails barre oblique slash ID du côlon
+
+671
+00:29:36,539 --> 00:29:39,539
+va montrer le film une barre oblique seins slash
+
+672
+00:29:39,539 --> 00:29:42,419
+modifier slash ID du côlon va éditer le livre
+
+673
+00:29:42,419 --> 00:29:45,720
+et slash livres slash supprimer l'ID du côlon
+
+674
+00:29:45,720 --> 00:29:49,140
+va supprimer le livre et c'est tout donc nous
+
+675
+00:29:49,140 --> 00:29:51,360
+les testons un par un  quand nous développons de
+
+676
+00:29:51,360 --> 00:29:53,960
+l'espace
+
+677
+00:29:54,740 --> 00:29:57,600
+maintenant, nous avons toutes nos routes,
+
+678
+00:29:57,600 --> 00:30:00,299
+continuons. Je veux utiliser deux packages npm
+
+679
+00:30:00,299 --> 00:30:02,840
+alors allons au terminal et démarrons-les.
+
+680
+00:30:02,840 --> 00:30:06,899
+npmi IX utilise des icônes de réaction, nous utilisons axios pour
+
+681
+00:30:06,899 --> 00:30:09,360
+envoyer des requêtes HTTP et nous utilisons
+
+682
+00:30:09,360 --> 00:30:12,659
+des icônes de réaction pour ses icônes, puis allons-y.  exécutez notre
+
+683
+00:30:12,659 --> 00:30:16,260
+serveur donc tapez CD backend puis npm
+
+684
+00:30:16,260 --> 00:30:18,720
+exécutez div puis décommentez le
+
+685
+00:30:18,720 --> 00:30:20,700
+middleware de cours par défaut et commentez le second
+
+686
+00:30:20,700 --> 00:30:23,220
+car notre IP est différente dans ce
+
+687
+00:30:23,220 --> 00:30:26,039
+projet ouvrons maintenant un nouveau terminal
+
+688
+00:30:26,039 --> 00:30:28,679
+pour notre projet frontal de type CD
+
+689
+00:30:28,679 --> 00:30:31,380
+front-end et ensuite  npm round div
+
+690
+00:30:31,380 --> 00:30:33,899
+avant de développer notre page d'accueil Je souhaite
+
+691
+00:30:33,899 --> 00:30:35,760
+créer un composant pour le chargement du domaine,
+
+692
+00:30:35,760 --> 00:30:38,279
+c'est une bonne idée de montrer à notre utilisateur en tant que
+
+693
+00:30:38,279 --> 00:30:40,080
+spinner lorsqu'il s'agit d'un domaine de chargement,
+
+694
+00:30:40,080 --> 00:30:42,000
+créons un nouveau dossier appelé
+
+695
+00:30:42,000 --> 00:30:44,880
+composants et créons un nouveau fichier nommé
+
+696
+00:30:44,880 --> 00:30:46,799
+spinner.js6
+
+697
+00:30:46,799 --> 00:30:49,260
+et à l'intérieur de cela, ayons une division
+
+698
+00:30:49,260 --> 00:30:52,140
+avec des noms de classe d'animation largeur de
+
+699
+00:30:52,140 --> 00:30:56,279
+16 hauteur de 16 marge 8 arrondis complets
+
+700
+00:30:56,279 --> 00:31:00,419
+et bgs skyr 600 c'est tout maintenant allons
+
+701
+00:31:00,419 --> 00:31:02,820
+à la page d'accueil et implémentons-la,
+
+702
+00:31:02,820 --> 00:31:04,740
+importons, utilisons ces données et utilisons l'effet de
+
+703
+00:31:04,740 --> 00:31:08,039
+réagir puis nous  importez axios depuis axios
+
+704
+00:31:08,039 --> 00:31:10,580
+puis importez un spinner à partir de son adresse,
+
+705
+00:31:10,580 --> 00:31:13,380
+puis nous avons besoin d'un lien de glisser le routeur vers
+
+706
+00:31:13,380 --> 00:31:16,500
+le bas, puis nous avons besoin de quelques icônes comme le
+
+707
+00:31:16,500 --> 00:31:19,679
+contour AI, modifier le cercle d'informations BS et la
+
+708
+00:31:19,679 --> 00:31:21,960
+boîte d'ajout de contour et dans le contour
+
+709
+00:31:21,960 --> 00:31:22,799
+supprimer,
+
+710
+00:31:22,799 --> 00:31:24,779
+nous voulons avoir deux différents
+
+711
+00:31:24,779 --> 00:31:27,419
+alors créons-les un état
+
+712
+00:31:27,419 --> 00:31:29,520
+pour nos livres avec la valeur par défaut d'un
+
+713
+00:31:29,520 --> 00:31:32,340
+tableau vide puis une valeur par défaut HD de chargement
+
+714
+00:31:32,340 --> 00:31:35,340
+ou false alors nous avons besoin que nous
+
+715
+00:31:35,340 --> 00:31:37,440
+appelions notre backend. Je ne parle pas de l'état de l'utilisateur
+
+716
+00:31:37,440 --> 00:31:39,179
+et de l'effet d'utilisation car je suppose
+
+717
+00:31:39,179 --> 00:31:40,860
+que vous  sommes familiers avec la réaction de base,
+
+718
+00:31:40,860 --> 00:31:43,020
+créons un effet utilisateur avec un
+
+719
+00:31:43,020 --> 00:31:46,020
+tableau de dépendances vide, utilisons d'abord
+
+720
+00:31:46,020 --> 00:31:49,200
+définir le chargement sur true, puis appelons access.get
+
+721
+00:31:49,200 --> 00:31:51,240
+avec notre liste backend Road for books,
+
+722
+00:31:51,240 --> 00:31:54,179
+puis nous recevons une réponse et définissons les livres
+
+723
+00:31:54,179 --> 00:31:55,460
+sur
+
+724
+00:31:55,460 --> 00:31:57,539
+réponse.data.data et  puis définissez le chargement de
+
+725
+00:31:57,539 --> 00:32:00,240
+deux fichiers. réponse.data est l'objet de
+
+726
+00:32:00,240 --> 00:32:03,120
+notre résultat de réponse et dans la mesure où nous avions
+
+727
+00:32:03,120 --> 00:32:06,059
+des données de contenu, nous utilisons donc ces données pour
+
+728
+00:32:06,059 --> 00:32:08,820
+les enregistrer dans notre état sur le bloc Cache, nous
+
+729
+00:32:08,820 --> 00:32:10,860
+recevons une erreur, puis nous les enregistrons dans la
+
+730
+00:32:10,860 --> 00:32:12,720
+console, puis nous  définissons le chargement
+
+731
+00:32:12,720 --> 00:32:15,840
+hier sur false maintenant travaillons sur les parties j6
+
+732
+00:32:15,840 --> 00:32:17,700
+
+
+733
+00:32:17,700 --> 00:32:21,480
+dans la division principale, nous utilisons P4 ou padding 4.
+
+734
+00:32:21,480 --> 00:32:23,159
+ensuite, ayons une division avec des
+
+735
+00:32:23,159 --> 00:32:26,520
+noms de classe de drapeaux justifiés entre les éléments du
+
+736
+00:32:26,520 --> 00:32:29,460
+Centre puis ayons un H1 avec des
+
+737
+00:32:29,460 --> 00:32:33,059
+noms de classe de texte 3x grande marge y  de 8 et
+
+738
+00:32:33,059 --> 00:32:34,980
+liste de livres textiles
+
+739
+00:32:34,980 --> 00:32:37,500
+après ce H1, créons un lien vers une
+
+740
+00:32:37,500 --> 00:32:39,899
+boîte slash et pour cette
+
+741
+00:32:39,899 --> 00:32:42,059
+étiquette, nous utilisons une icône dans la
+
+742
+00:32:42,059 --> 00:32:45,299
+boîte de contour avec des classes de texte sk800 et
+
+743
+00:32:45,299 --> 00:32:47,940
+un texte Forex large après la première
+
+744
+00:32:47,940 --> 00:32:50,039
+division, ouvrons un bouclé  préparez-vous et
+
+745
+00:32:50,039 --> 00:32:52,020
+vérifiez si vous déchargez un état ou
+
+746
+00:32:52,020 --> 00:32:54,960
+non et si c'est vrai, rendons un
+
+747
+00:32:54,960 --> 00:32:58,020
+composant spinner, sinon nous renvoyons une table
+
+748
+00:32:58,020 --> 00:33:00,600
+avec des classes de avec une bordure complète
+
+749
+00:33:00,600 --> 00:33:03,720
+séparée et un espacement de bordure de deux dans la mesure où
+
+750
+00:33:03,720 --> 00:33:06,779
+nous devons avoir une tête en T et un corps en T dans
+
+751
+00:33:06,779 --> 00:33:09,779
+t-head faisons un tiro et en cela je
+
+752
+00:33:09,779 --> 00:33:11,880
+veux avoir une 3D avec des classes de Border
+
+753
+00:33:11,880 --> 00:33:15,779
+ou le domaine 600 MD arrondi et
+
+754
+00:33:15,779 --> 00:33:18,840
+fixé non alors ayons un autre THB mêmes
+
+755
+00:33:18,840 --> 00:33:22,080
+classes et texte de titre puis encore
+
+756
+00:33:22,080 --> 00:33:24,779
+un autre nous sort l'auteur mais  avec
+
+757
+00:33:24,779 --> 00:33:28,320
+une classe supplémentaire de Max MDA cachée pour
+
+758
+00:33:28,320 --> 00:33:30,299
+que cette colonne soit masquée dans les
+
+759
+00:33:30,299 --> 00:33:32,760
+tailles Mobile et tablette et encore
+
+760
+00:33:32,760 --> 00:33:35,460
+une autre avec les mêmes classes avec le titre
+
+761
+00:33:35,460 --> 00:33:36,659
+de l'éditeur
+
+762
+00:33:36,659 --> 00:33:39,179
+enfin ayons un titre d'
+
+763
+00:33:39,179 --> 00:33:41,399
+opérations mais pour celui-ci je n'utilise pas
+
+764
+00:33:41,399 --> 00:33:44,279
+Maxim V  de caché donc nous avons cinq
+
+765
+00:33:44,279 --> 00:33:46,260
+colonnes et deux d'entre elles seraient cachées
+
+766
+00:33:46,260 --> 00:33:48,120
+quatre tailles inférieures
+
+767
+00:33:48,120 --> 00:33:50,580
+alors ouvrons une accolade et utilisons
+
+768
+00:33:50,580 --> 00:33:53,159
+books.map avec une fonction de flèche nous
+
+769
+00:33:53,159 --> 00:33:55,320
+recevons book un index pour chaque élément du
+
+770
+00:33:55,320 --> 00:33:58,140
+tableau books et nous renvoyons un TR avec clé
+
+771
+00:33:58,140 --> 00:34:00,600
+du point du livre, l'ID souligné et le nom de la classe
+
+772
+00:34:00,600 --> 00:34:04,019
+ont une hauteur de 8. le premier élément est un bit TD.
+
+773
+00:34:04,019 --> 00:34:07,099
+
+
+774
+00:34:07,099 --> 00:34:10,679
+
+
+775
+00:34:10,679 --> 00:34:12,899
+
+
+776
+00:34:12,899 --> 00:34:16,139
+
+
+777
+00:34:16,139 --> 00:34:18,839
+commençons par un, puis
+
+778
+00:34:18,839 --> 00:34:20,820
+prenons un autre TD, des classes et le
+
+779
+00:34:20,820 --> 00:34:24,239
+texte du titre du livre, puis un autre TD, le
+
+780
+00:34:24,239 --> 00:34:26,339
+titre de l'auteur du point du livre, mais pour celui-ci,
+
+781
+00:34:26,339 --> 00:34:29,399
+nous utilisons max mdl caché comme la
+
+782
+00:34:29,399 --> 00:34:32,159
+section supérieure, puis créons un autre
+
+783
+00:34:32,159 --> 00:34:34,500
+livre tdv. publions ici et encore avec  Max et
+
+784
+00:34:34,500 --> 00:34:37,260
+vous avez caché et enfin un autre TD
+
+785
+00:34:37,260 --> 00:34:40,260
+pour nos opérations dans le TD final J'utilise
+
+786
+00:34:40,260 --> 00:34:42,300
+une division avec des noms de classes de drapeaux
+
+787
+00:34:42,300 --> 00:34:46,080
+justifient Center Gap xr4 et dans cette
+
+788
+00:34:46,080 --> 00:34:47,699
+Division je veux avoir trois
+
+789
+00:34:47,699 --> 00:34:50,580
+liens différents avec des icônes créons un lien vers
+
+790
+00:34:50,580 --> 00:34:53,040
+une boîte slash  une barre oblique détaille la barre oblique du livre point
+
+791
+00:34:53,040 --> 00:34:55,139
+souligné l'oeil J'utilise la syntaxe
+
+792
+00:34:55,139 --> 00:34:57,599
+pour créer des routes dynamiques à l'intérieur de ce lien,
+
+793
+00:34:57,599 --> 00:35:00,060
+faisons un bscilling pour les classes
+
+794
+00:35:00,060 --> 00:35:03,000
+de texte semaines grand filtrage de texte 800.
+
+795
+00:35:03,000 --> 00:35:05,580
+puis un autre lien vers une barre oblique livres une
+
+796
+00:35:05,580 --> 00:35:07,920
+barre oblique modifier la barre oblique livre point souligné  ID
+
+797
+00:35:07,920 --> 00:35:11,160
+avec icône d'édition et couleur jaune puis
+
+798
+00:35:11,160 --> 00:35:13,380
+trouvez un lien vers une barre oblique livres une barre oblique
+
+799
+00:35:13,380 --> 00:35:16,020
+supprimer un point de livre souligné ID avec
+
+800
+00:35:16,020 --> 00:35:19,560
+icône de suppression et une couleur rouge maintenant formatons
+
+801
+00:35:19,560 --> 00:35:22,440
+notre document puis allons dans notre
+
+802
+00:35:22,440 --> 00:35:25,200
+application pour voir le résultat
+
+803
+00:35:25,200 --> 00:35:28,940
+d'abord ajoutons simplement
+
+804
+00:35:29,520 --> 00:35:33,359
+puis ajoutons  testons les détails du livre, puis
+
+805
+00:35:33,359 --> 00:35:35,160
+testons la modification du livre,
+
+806
+00:35:35,160 --> 00:35:38,640
+puis testons la suppression du livre et vous pouvez voir
+
+807
+00:35:38,640 --> 00:35:42,320
+qu'ils fonctionnent tous correctement
+
+808
+00:35:42,500 --> 00:35:45,599
+après avoir affiché tous les livres dans le tableau, nous
+
+809
+00:35:45,599 --> 00:35:47,220
+pouvons afficher les détails d'un livre dans une autre
+
+810
+00:35:47,220 --> 00:35:49,619
+page avant cela, je souhaite créer un
+
+811
+00:35:49,619 --> 00:35:52,320
+composant réutilisable pour mon dos  bouton Je
+
+812
+00:35:52,320 --> 00:35:54,060
+veux avoir un bouton pour revenir à notre
+
+813
+00:35:54,060 --> 00:35:56,579
+liste de livres, créons-le d'abord dans le
+
+814
+00:35:56,579 --> 00:35:58,920
+dossier des composants, créons un nouveau
+
+815
+00:35:58,920 --> 00:36:02,520
+nom de fichier bouton retour.j6 à l'intérieur de ce
+
+816
+00:36:02,520 --> 00:36:05,040
+premier lien d'importation du recruteur vers le bas,
+
+817
+00:36:05,040 --> 00:36:07,920
+puis importons contre la flèche gauche à partir
+
+818
+00:36:07,920 --> 00:36:10,200
+des icônes déplacées que nous pouvons  recevez ici un accessoire de destination
+
+819
+00:36:10,200 --> 00:36:13,140
+avec la valeur par défaut d'une barre oblique, donc si
+
+820
+00:36:13,140 --> 00:36:15,540
+nous ne la transmettons pas, la destination sera
+
+821
+00:36:15,540 --> 00:36:18,720
+une barre oblique par défaut pour la classe principale,
+
+822
+00:36:18,720 --> 00:36:21,660
+j'utilise flex et à l'intérieur, créons
+
+823
+00:36:21,660 --> 00:36:25,320
+un composant de lien vers la destination et pour les
+
+824
+00:36:25,320 --> 00:36:28,920
+noms de classe I  utilisez le texte bgs Sky 800 blanc
+
+825
+00:36:28,920 --> 00:36:32,520
+en ajoutant le fil de rembourrage xr4, un
+
+826
+00:36:32,520 --> 00:36:36,060
+LG et Vita arrondis s'inscrivent à l'intérieur du lien, nous pouvons
+
+827
+00:36:36,060 --> 00:36:38,160
+utiliser notre icône avec le nom de classe du texte, les
+
+828
+00:36:38,160 --> 00:36:41,520
+ajustements sont grands et c'est tout maintenant, je vais d'abord au
+
+829
+00:36:41,520 --> 00:36:44,160
+composant showboat, fermons l'
+
+830
+00:36:44,160 --> 00:36:46,619
+Explorateur pour en avoir plus  espace,
+
+831
+00:36:46,619 --> 00:36:49,500
+nous devons importer l'effet d'utilisation et
+
+832
+00:36:49,500 --> 00:36:51,780
+utiliser un état de réaction, puis nous avons besoin d'
+
+833
+00:36:51,780 --> 00:36:54,720
+axios, nous devons également utiliser les paramètres du
+
+834
+00:36:54,720 --> 00:36:57,540
+régulateur vers le bas et nous avons également besoin du
+
+835
+00:36:57,540 --> 00:36:59,760
+composant du bouton de retour et du
+
+836
+00:36:59,760 --> 00:37:02,640
+composant spinal dans notre show book, nous avons besoin d'un
+
+837
+00:37:02,640 --> 00:37:05,400
+domaine de livres pour gérer notre livre.  show puis
+
+838
+00:37:05,400 --> 00:37:07,020
+j'utilise un état de chargement pour gérer le
+
+839
+00:37:07,020 --> 00:37:10,020
+temps de chargement, puis l'ID de structure d'idée à partir des
+
+840
+00:37:10,020 --> 00:37:12,839
+paramètres d'utilisation, puis j'utilise le hook d'effet d'utilisation
+
+841
+00:37:12,839 --> 00:37:15,900
+et en premier, je règle le chargement sur
+
+842
+00:37:15,900 --> 00:37:19,260
+true, puis nous utilisons axios.get avec l'
+
+843
+00:37:19,260 --> 00:37:21,960
+adresse de ce livre avec son ID  puis je
+
+844
+00:37:21,960 --> 00:37:24,480
+reçois une réponse et je définis les données de réponse
+
+845
+00:37:24,480 --> 00:37:26,820
+pour réserver un état, puis je définis la charge dans
+
+846
+00:37:26,820 --> 00:37:29,579
+les fichiers et dans le bloc catch, je reçois une erreur
+
+847
+00:37:29,579 --> 00:37:32,460
+et je verrouille simplement cette erreur, puis je
+
+848
+00:37:32,460 --> 00:37:35,400
+définis la charge sur false dans la section de retour.
+
+849
+00:37:35,400 --> 00:37:37,980
+J'utilise un remplissage pour la classe 4 principale.  div puis
+
+850
+00:37:37,980 --> 00:37:40,680
+j'utilise le bouton retour et il a une ligne par défaut
+
+851
+00:37:40,680 --> 00:37:43,260
+donc nous n'avons pas besoin de lui transmettre une ligne alors
+
+852
+00:37:43,260 --> 00:37:45,839
+ayons un H1 avec des lunettes de texte 3x
+
+853
+00:37:45,839 --> 00:37:48,859
+grande marge par 4 et la valeur du show book
+
+854
+00:37:48,859 --> 00:37:52,320
+puis vérifions le chargement si c'est
+
+855
+00:37:52,320 --> 00:37:55,200
+vrai nous  peut montrer un composant spinal sinon
+
+856
+00:37:55,200 --> 00:37:57,300
+nous pouvons montrer une division avec des classes de
+
+857
+00:37:57,300 --> 00:38:01,079
+drapeaux Bordure de colonne flexible Bordure 2 Sky
+
+858
+00:38:01,079 --> 00:38:04,440
+400 a arrondi son grand flux Vita et son
+
+859
+00:38:04,440 --> 00:38:06,900
+rembourrage de quatre alors je veux utiliser une
+
+860
+00:38:06,900 --> 00:38:09,300
+structure et la répéter, créons-la
+
+861
+00:38:09,300 --> 00:38:11,280
+J'utilise la division avec des classes  de
+
+862
+00:38:11,280 --> 00:38:14,160
+la marge y4 à l'intérieur, j'utilise un
+
+863
+00:38:14,160 --> 00:38:16,680
+nom de classe standard de prendre six écrivains à grande marge
+
+864
+00:38:16,680 --> 00:38:20,339
+4 prend la couche 500 et la valeur
+
+865
+00:38:20,339 --> 00:38:23,400
+de l'ID, puis j'utilise une autre valeur étendue
+
+866
+00:38:23,400 --> 00:38:26,099
+de l'ID souligné par le point du livre, les autres parties
+
+867
+00:38:26,099 --> 00:38:28,320
+sont copiées-collées, copions-le et utilisons
+
+868
+00:38:28,320 --> 00:38:31,200
+le titre  et réservez le titre puis une autre
+
+869
+00:38:31,200 --> 00:38:34,020
+copie avec l'auteur et l'auteur du livre point
+
+870
+00:38:34,020 --> 00:38:37,140
+encore une autre copie que nous publions ici et
+
+871
+00:38:37,140 --> 00:38:39,960
+book.publish ici et l'élément suivant est l'
+
+872
+00:38:39,960 --> 00:38:42,619
+heure de création et les nouvelles données de
+
+873
+00:38:42,619 --> 00:38:45,960
+book.ql.2s3 et la dernière est une copie avec l'
+
+874
+00:38:45,960 --> 00:38:48,560
+heure de la dernière mise à jour et  nouvelles données de
+
+875
+00:38:48,560 --> 00:38:51,480
+book.updated au flux dot twist et
+
+876
+00:38:51,480 --> 00:38:52,980
+c'est tout maintenant, allons sur notre
+
+877
+00:38:52,980 --> 00:38:56,480
+application et testons-la
+
+878
+00:38:57,060 --> 00:38:59,760
+et ici je teste certains de mes livres et vous
+
+879
+00:38:59,760 --> 00:39:03,740
+pouvez voir qu'il fonctionne correctement
+
+880
+00:39:05,720 --> 00:39:09,440
+maintenant, travaillons à la création d'un nouveau livre dans
+
+881
+00:39:09,440 --> 00:39:11,880
+createbook.  j6 nous devons importer l'état de l'utilisateur,
+
+882
+00:39:11,880 --> 00:39:15,140
+puis nous avons besoin du bouton retour, d'un spinner
+
+883
+00:39:15,140 --> 00:39:18,060
+axios et d'utiliser la navigation régulière.
+
+884
+00:39:18,060 --> 00:39:19,980
+Il existe différentes solutions pour
+
+885
+00:39:19,980 --> 00:39:22,740
+contrôler nos données de formulaire. J'utilise simplement
+
+886
+00:39:22,740 --> 00:39:24,960
+trois états différents pour eux, utilisons donc
+
+887
+00:39:24,960 --> 00:39:29,220
+l'auteur et l'éditeur du titre, puis
+
+888
+00:39:29,220 --> 00:39:31,920
+j'utilise un état de chargement.  après cela, j'utilise
+
+889
+00:39:31,920 --> 00:39:34,800
+naviguer est égal à utiliser Navigator. J'en ai besoin
+
+890
+00:39:34,800 --> 00:39:36,480
+pour naviguer vers Main Road après avoir
+
+891
+00:39:36,480 --> 00:39:39,480
+créé notre nouveau livre, puis je crée une
+
+892
+00:39:39,480 --> 00:39:41,460
+fonction de sauvegarde du livre pour gérer
+
+893
+00:39:41,460 --> 00:39:44,579
+notre opération de création de livre ici, créons d'abord un nouvel
+
+894
+00:39:44,579 --> 00:39:46,680
+objet de données avec la valeur
+
+895
+00:39:46,680 --> 00:39:50,339
+de l'auteur du titre et  éditeur, puis je règle le
+
+896
+00:39:50,339 --> 00:39:53,579
+chargement sur true, puis j'utilise access.pose
+
+897
+00:39:53,579 --> 00:39:56,280
+sur un slash books et j'envoie des données comme
+
+898
+00:39:56,280 --> 00:39:58,859
+deuxième paramètre, puis je bloque. Je
+
+899
+00:39:58,859 --> 00:40:00,900
+commence simplement à charger les fichiers et je navigue vers une
+
+900
+00:40:00,900 --> 00:40:02,040
+slash Road
+
+901
+00:40:02,040 --> 00:40:04,980
+et sur le bloc catch, j'ai reçu une erreur et
+
+902
+00:40:04,980 --> 00:40:07,680
+je me suis installé  les fichiers affichent ensuite une alerte
+
+903
+00:40:07,680 --> 00:40:09,540
+avec du texte, puis verrouillent l'erreur
+
+904
+00:40:09,540 --> 00:40:12,780
+sur la console, puis travaillons sur js6 pour le
+
+905
+00:40:12,780 --> 00:40:14,880
+div principal, ajoutons l'heure de classe du remplissage
+
+906
+00:40:14,880 --> 00:40:17,720
+4. puis j'ajoute le composant de bouton de retour ici,
+
+907
+00:40:17,720 --> 00:40:20,400
+puis ayons un H1 avec les noms de classe
+
+908
+00:40:20,400 --> 00:40:23,520
+du texte 3 est  grande marge y de 4 et
+
+909
+00:40:23,520 --> 00:40:26,160
+valeur de create book alors vérifions
+
+910
+00:40:26,160 --> 00:40:28,859
+le domaine de chargement et si c'est vrai nous
+
+911
+00:40:28,859 --> 00:40:31,200
+montrons un spinner sinon pour afficher une
+
+912
+00:40:31,200 --> 00:40:33,660
+chaîne vide alors ayons une division avec
+
+913
+00:40:33,660 --> 00:40:36,900
+des classes de drapeaux Bordure de colonne flexible 2
+
+914
+00:40:36,900 --> 00:40:40,560
+bordure Ciel 400 arrondi son grand  largeur
+
+915
+00:40:40,560 --> 00:40:43,680
+de 600 pixels, remplissage de 4 et légèrement
+
+916
+00:40:43,680 --> 00:40:46,500
+sous Auto, alors je veux avoir une structure
+
+917
+00:40:46,500 --> 00:40:48,599
+et la répéter, créons donc une division
+
+918
+00:40:48,599 --> 00:40:51,540
+avec le nom de classe de marge y4 à l'intérieur de laquelle
+
+919
+00:40:51,540 --> 00:40:53,400
+je veux avoir une étiquette avec des noms de classe
+
+920
+00:40:53,400 --> 00:40:56,940
+de texte 6 grand taux de marge de  4 prend une
+
+921
+00:40:56,940 --> 00:41:00,540
+couche de 500 et la valeur du titre, puis
+
+922
+00:41:00,540 --> 00:41:02,640
+prenons une entrée avec le type de prend la
+
+923
+00:41:02,640 --> 00:41:05,820
+valeur du titre et changeons l'événement que nous avons reçu
+
+924
+00:41:05,820 --> 00:41:08,060
+et définissons le titre sur
+
+925
+00:41:08,060 --> 00:41:10,140
+event.target.value et les noms de classe de
+
+926
+00:41:10,140 --> 00:41:13,859
+Border 2 border gray 500 padding X of 4
+
+927
+00:41:13,859 --> 00:41:17,280
+padding by  de 2 vita food alors nous pouvons
+
+928
+00:41:17,280 --> 00:41:19,800
+simplement copier et coller cette structure pour
+
+929
+00:41:19,800 --> 00:41:22,619
+l'étiquette, utilisons l'auteur puis changeons la
+
+930
+00:41:22,619 --> 00:41:25,320
+valeur en Auto et changeons la valeur inchangée
+
+931
+00:41:25,320 --> 00:41:28,079
+pour définir l'auteur puis copions-collons
+
+932
+00:41:28,079 --> 00:41:30,839
+à nouveau cette structure et utilisons publier ici pour
+
+933
+00:41:30,839 --> 00:41:34,020
+l'étiquette ainsi que la valeur et pour  en cas de changement,
+
+934
+00:41:34,020 --> 00:41:37,200
+nous utilisons set submit ici, enfin,
+
+935
+00:41:37,200 --> 00:41:39,420
+ayons un bouton avec des classes de remplissage 2
+
+936
+00:41:39,420 --> 00:41:43,740
+bgs5 300 et une marge de 8 et en cliquant, nous
+
+937
+00:41:43,740 --> 00:41:46,140
+appelons sous la fonction disons book et vous
+
+938
+00:41:46,140 --> 00:41:48,720
+enregistrez pour son étiquette maintenant, allons dans notre
+
+939
+00:41:48,720 --> 00:41:51,180
+application et testons-la ici,
+
+940
+00:41:51,180 --> 00:41:53,480
+insérons  quelques informations pour notre nouveau livre
+
+941
+00:41:53,480 --> 00:41:56,700
+et après cela nous appuyons sur Enregistrer et attendons
+
+942
+00:41:56,700 --> 00:41:59,339
+le résultat s'il réussit, nous
+
+943
+00:41:59,339 --> 00:42:01,260
+serons automatiquement redirigés vers la
+
+944
+00:42:01,260 --> 00:42:03,180
+page d'accueil et comme vous pouvez voir notre nouveau
+
+945
+00:42:03,180 --> 00:42:05,700
+livre ici
+
+946
+00:42:05,700 --> 00:42:08,880
+maintenant, nous pouvons travailler sur l'édition de la nourriture car la
+
+947
+00:42:08,880 --> 00:42:10,619
+structure de  notre édition est comme créer
+
+948
+00:42:10,619 --> 00:42:13,560
+soit pour createbook.js6 et
+
+949
+00:42:13,560 --> 00:42:16,380
+tout copier, puis je retourne éditer le livre
+
+950
+00:42:16,380 --> 00:42:18,660
+et les colle tous à la place du
+
+951
+00:42:18,660 --> 00:42:21,420
+composant actuel, puis je change le nom de notre
+
+952
+00:42:21,420 --> 00:42:24,000
+composant pour éditer à nouveau le livre et
+
+953
+00:42:24,000 --> 00:42:27,000
+j'exporte le travail d'édition par défaut, puis c'est parti
+
+954
+00:42:27,000 --> 00:42:29,400
+au H1 et changez-le de créer un livre
+
+955
+00:42:29,400 --> 00:42:33,119
+à éditer un livre et en édition, nous récupérons d'abord
+
+956
+00:42:33,119 --> 00:42:35,640
+notre livre avec son ID depuis le backend et nous
+
+957
+00:42:35,640 --> 00:42:37,260
+devons utiliser l'effet et utiliser le produit à
+
+958
+00:42:37,260 --> 00:42:39,780
+cet effet, alors allons en haut de
+
+959
+00:42:39,780 --> 00:42:42,300
+notre page et importons l'effet d'utilisation  et utilisez
+
+960
+00:42:42,300 --> 00:42:45,180
+les paramètres, nous pouvons simplement restructurer
+
+961
+00:42:45,180 --> 00:42:48,480
+l'ID à partir des paramètres d'utilisation, puis utilisons l'
+
+962
+00:42:48,480 --> 00:42:51,240
+effet et, à l'intérieur, définissons d'abord
+
+963
+00:42:51,240 --> 00:42:54,380
+le chargement sur true, puis appelons
+
+964
+00:42:54,380 --> 00:42:57,540
+axios.getrotub slash books slash ID, puis
+
+965
+00:42:57,540 --> 00:43:00,480
+cliquez sur recevoir des données et définissez auto sur
+
+966
+00:43:00,480 --> 00:43:03,359
+réponse.data cet autre  définissez l'éditeur
+
+967
+00:43:03,359 --> 00:43:05,700
+pour qu'il réponde au data.publish ici et
+
+968
+00:43:05,700 --> 00:43:07,460
+au titre de
+
+969
+00:43:07,460 --> 00:43:09,900
+réponse.data.title, puis définissez le chargement
+
+970
+00:43:09,900 --> 00:43:12,780
+sur les fichiers et lors de la capture ci-dessous, nous pouvons
+
+971
+00:43:12,780 --> 00:43:15,480
+simplement définir le chargement dans les fichiers, afficher une alerte
+
+972
+00:43:15,480 --> 00:43:17,460
+avec le texte personnalisé, puis enregistrer la
+
+973
+00:43:17,460 --> 00:43:20,040
+flèche sur la console.  maintenant nous avons les données de notre
+
+974
+00:43:20,040 --> 00:43:22,800
+livre dans l'immobilier donc nous devons pouvoir
+
+975
+00:43:22,800 --> 00:43:25,020
+les voir sur les importations allons dans l'
+
+976
+00:43:25,020 --> 00:43:28,880
+application et vérifions-la avant de continuer,
+
+977
+00:43:29,280 --> 00:43:31,920
+il semble que cela fonctionne donc
+
+978
+00:43:31,920 --> 00:43:33,720
+continuons
+
+979
+00:43:33,720 --> 00:43:36,240
+le seul changement ici est la
+
+980
+00:43:36,240 --> 00:43:38,339
+fonction de sauvegarde du livre, renommons  cette fonction
+
+981
+00:43:38,339 --> 00:43:41,940
+pour gérer à nouveau l'édition du livre, nous voulons des données
+
+982
+00:43:41,940 --> 00:43:44,760
+et définir le chargement, mais pour la méthode HTTP, nous
+
+983
+00:43:44,760 --> 00:43:47,400
+devons également mettre l'idée du livre,
+
+984
+00:43:47,400 --> 00:43:50,280
+donc j'utilise des littéraux de modèle et j'ajoute un ID
+
+985
+00:43:50,280 --> 00:43:52,740
+après les livres slash et les autres
+
+986
+00:43:52,740 --> 00:43:54,720
+fonctionnalités sont les mêmes, donc nous ne le faisons pas.  Nous n'avons pas
+
+987
+00:43:54,720 --> 00:43:57,540
+besoin de les changer, mais nous changeons le
+
+988
+00:43:57,540 --> 00:44:00,000
+nom de la fonction, alors allons sur le bouton
+
+989
+00:44:00,000 --> 00:44:02,880
+Ajouter dans la section de clic, changeons le nom
+
+990
+00:44:02,880 --> 00:44:05,520
+pour gérer le travail d'édition, allons maintenant à notre
+
+991
+00:44:05,520 --> 00:44:08,220
+application et testons-la,
+
+992
+00:44:08,220 --> 00:44:10,560
+cliquons sur le bouton Modifier sur un
+
+993
+00:44:10,560 --> 00:44:12,480
+livre aléatoire dont nous avons besoin.  attendez l'
+
+994
+00:44:12,480 --> 00:44:14,579
+état de chargement et ensuite nous pouvons voir les données du livre,
+
+995
+00:44:14,579 --> 00:44:17,700
+modifions-les avec des données aléatoires,
+
+996
+00:44:17,700 --> 00:44:20,339
+puis cliquez sur Enregistrer, l'application passe
+
+997
+00:44:20,339 --> 00:44:22,140
+au chargement et après le chargement en
+
+998
+00:44:22,140 --> 00:44:23,880
+réponse réussie, nous devons être
+
+999
+00:44:23,880 --> 00:44:26,220
+redirigés vers la page d'accueil et ici nous devons
+
+1000
+00:44:26,220 --> 00:44:30,480
+voir notre mise à jour  les données
+
+1001
+00:44:31,040 --> 00:44:34,200
+et la dernière page de notre projet de pile principale
+
+1002
+00:44:34,200 --> 00:44:36,780
+sont Supprimer le livre, travaillons donc dessus
+
+1003
+00:44:36,780 --> 00:44:39,599
+dans ce livre.js6, nous devons importer le
+
+1004
+00:44:39,599 --> 00:44:44,339
+bouton Retour de l'état de l'utilisateur, un spinner axios
+
+1005
+00:44:44,339 --> 00:44:47,220
+utilise la navigation et utilise les paramètres du
+
+1006
+00:44:47,220 --> 00:44:50,640
+routeur glisser, puis ayons un état de chargement
+
+1007
+00:44:50,640 --> 00:44:53,760
+après cela  J'utilise naviguer égal à utiliser
+
+1008
+00:44:53,760 --> 00:44:57,000
+naviguer puis l'ID de structure des identifiants pour utiliser les
+
+1009
+00:44:57,000 --> 00:44:59,940
+bras de puissance, puis je crée une fonction de suppression de livre de poignée
+
+1010
+00:44:59,940 --> 00:45:03,240
+ici d'abord, je règle la charge sur
+
+1011
+00:45:03,240 --> 00:45:06,480
+vrai, puis j'utilise axios.delete pour réduire l'
+
+1012
+00:45:06,480 --> 00:45:10,140
+idée des livres de notre livre, puis je blogue, je
+
+1013
+00:45:10,140 --> 00:45:12,119
+définis simplement le chargement  vers les fichiers et accédez
+
+1014
+00:45:12,119 --> 00:45:15,000
+à une barre oblique sur le bloc catch J'ai
+
+1015
+00:45:15,000 --> 00:45:17,160
+reçu une erreur et je me suis installé dans les fichiers,
+
+1016
+00:45:17,160 --> 00:45:19,980
+puis j'ai affiché une alerte avec du texte,
+
+1017
+00:45:19,980 --> 00:45:22,260
+puis j'ai verrouillé l'erreur sur la console dans la
+
+1018
+00:45:22,260 --> 00:45:24,359
+section de retour pour la division principale. J'utilise le
+
+1019
+00:45:24,359 --> 00:45:27,000
+nom de famille du remplissage 4, puis j'utilise  bouton de retour
+
+1020
+00:45:27,000 --> 00:45:29,819
+après cela, j'utilise une balise H1 avec
+
+1021
+00:45:29,819 --> 00:45:32,819
+des classes de texte 3 est une grande marge par un 4
+
+1022
+00:45:32,819 --> 00:45:35,760
+et décolle de la suppression, puis
+
+1023
+00:45:35,760 --> 00:45:38,220
+vérifions le chargement et si c'est vrai, nous
+
+1024
+00:45:38,220 --> 00:45:40,800
+renvoyons un composant spinal sinon nous renvoyons
+
+1025
+00:45:40,800 --> 00:45:43,740
+un S3 vide alors faisons une division
+
+1026
+00:45:43,740 --> 00:45:46,440
+avec les noms de famille des drapeaux Élément de colonne Flex
+
+1027
+00:45:46,440 --> 00:45:50,640
+Bordure centrale 2 échelle de bordure de 400
+
+1028
+00:45:50,640 --> 00:45:54,180
+arrondie x grande largeur de 600 pixels
+
+1029
+00:45:54,180 --> 00:45:57,480
+remplissage d'un et marge sous Auto puis
+
+1030
+00:45:57,480 --> 00:45:59,819
+ayons un H3 avec le nom de classe du texte de
+
+1031
+00:45:59,819 --> 00:46:02,640
+2 semaines de large et prend êtes-vous sûr de
+
+1032
+00:46:02,640 --> 00:46:05,280
+vouloir  pour supprimer ce livre alors
+
+1033
+00:46:05,280 --> 00:46:07,260
+ayons un bouton avec le nom de classe de remplissage
+
+1034
+00:46:07,260 --> 00:46:11,099
+4 taux occupé de 600 prend une large marge de
+
+1035
+00:46:11,099 --> 00:46:14,280
+8 et Vita de plein et en cliquant nous
+
+1036
+00:46:14,280 --> 00:46:16,859
+invoquons la fonction de suppression de livre de poignée et
+
+1037
+00:46:16,859 --> 00:46:19,859
+pour son utilisation étiquetée oui supprimez-le et
+
+1038
+00:46:19,859 --> 00:46:21,660
+c'est tout c'est parti  à notre application
+
+1039
+00:46:21,660 --> 00:46:23,160
+et testez-la
+
+1040
+00:46:23,160 --> 00:46:25,500
+et ici nous pouvons cliquer sur le bouton Supprimer
+
+1041
+00:46:25,500 --> 00:46:28,260
+de n'importe quel livre que nous voulons en effet page, nous pouvons
+
+1042
+00:46:28,260 --> 00:46:29,940
+cliquer sur le bouton Supprimer et après
+
+1043
+00:46:29,940 --> 00:46:32,460
+une suppression réussie, nous devons être redirigés
+
+1044
+00:46:32,460 --> 00:46:34,859
+vers une page d'accueil et ici vous pouvez voir que
+
+1045
+00:46:34,859 --> 00:46:38,359
+le livre est supprimé  eh
+
+1046
+00:46:38,660 --> 00:46:41,760
+bien, notre application Cloud est terminée,
+
+1047
+00:46:41,760 --> 00:46:44,220
+non, rendons-la plus belle et plus
+
+1048
+00:46:44,220 --> 00:46:46,140
+élégante. Je veux avoir deux
+
+1049
+00:46:46,140 --> 00:46:48,119
+options différentes pour afficher la liste du livre aux
+
+1050
+00:46:48,119 --> 00:46:51,240
+téléspectateurs, le tableau et les cartes, nous avons implémenté
+
+1051
+00:46:51,240 --> 00:46:54,300
+le tableau, alors ajoutons des cartes dans la première
+
+1052
+00:46:54,300 --> 00:46:56,880
+étape, allons dans le dossier des composants et
+
+1053
+00:46:56,880 --> 00:47:00,240
+créons un  nouveau dossier nommé home dans lequel je
+
+1054
+00:47:00,240 --> 00:47:04,500
+crée deux composants bookscard.jsx
+
+1055
+00:47:04,800 --> 00:47:07,800
+j6,
+
+1056
+00:47:09,540 --> 00:47:12,119
+nous devons d'abord refactoriser la table,
+
+1057
+00:47:12,119 --> 00:47:14,880
+allons donc à la page d'accueil et
+
+1058
+00:47:14,880 --> 00:47:18,720
+importons d'abord la table des livres et la carte de démarrage, puis coupons
+
+1059
+00:47:18,720 --> 00:47:21,359
+la balise de table de cette page et allons à la
+
+1060
+00:47:21,359 --> 00:47:23,700
+table des livres et collez-la  à l'intérieur de la
+
+1061
+00:47:23,700 --> 00:47:26,819
+section de retour, nous avons besoin d'une liste de livres, nous
+
+1062
+00:47:26,819 --> 00:47:29,880
+la recevons donc des accessoires, nous utilisons également
+
+1063
+00:47:29,880 --> 00:47:32,400
+un lien et quelques icônes, copions donc le
+
+1064
+00:47:32,400 --> 00:47:36,380
+lien et les icônes de la page d'accueil
+
+1065
+00:47:36,720 --> 00:47:39,240
+et collons-les ici et non, il est
+
+1066
+00:47:39,240 --> 00:47:42,420
+terminé afin de l'utiliser à la maison
+
+1067
+00:47:42,420 --> 00:47:45,060
+page au lieu de toutes les balises de table, nous utilisons
+
+1068
+00:47:45,060 --> 00:47:47,520
+ce composant et nous lui passons des livres
+
+1069
+00:47:47,520 --> 00:47:50,339
+après avoir refactorisé la table, nous avons besoin d'un
+
+1070
+00:47:50,339 --> 00:47:52,680
+état pour contrôler le type d'émission,
+
+1071
+00:47:52,680 --> 00:47:55,140
+ajoutons donc un état plus court et utilisons une
+
+1072
+00:47:55,140 --> 00:47:58,020
+valeur par défaut de tables pour cela, puis
+
+1073
+00:47:58,020 --> 00:48:00,300
+juste après le principal  div créons une
+
+1074
+00:48:00,300 --> 00:48:02,700
+autre division avec le nom de classe de flex
+
+1075
+00:48:02,700 --> 00:48:06,180
+justifier les éléments centraux de Center et obtenons-
+
+1076
+00:48:06,180 --> 00:48:09,000
+nous pour ensuite j'utilise un bouton avec le
+
+1077
+00:48:09,000 --> 00:48:12,960
+nom de classe de bgs5300 et cependant pgs5
+
+1078
+00:48:12,960 --> 00:48:16,920
+de 600 padding xr4 padding wire 1 et
+
+1079
+00:48:16,920 --> 00:48:20,520
+arrondi LG et en cliquant, je l'ai dit,
+
+1080
+00:48:20,520 --> 00:48:23,640
+tapez  vers table et j'utilise table pour son
+
+1081
+00:48:23,640 --> 00:48:25,740
+texte alors nous pouvons copier ce bouton et
+
+1082
+00:48:25,740 --> 00:48:27,900
+réutiliser les classes et décocher cette
+
+1083
+00:48:27,900 --> 00:48:31,079
+carte sensuelle de type 2 et j'utilise card pour
+
+1084
+00:48:31,079 --> 00:48:33,420
+son texte maintenant nous avons la fonctionnalité
+
+1085
+00:48:33,420 --> 00:48:36,420
+de changer le design et descendons
+
+1086
+00:48:36,420 --> 00:48:38,640
+et modifions le retour  après le chargement, donc
+
+1087
+00:48:38,640 --> 00:48:41,220
+après le chargement, nous vérifions que si le type d'affichage est
+
+1088
+00:48:41,220 --> 00:48:44,400
+égal à la table, nous retournons la table des boîtes, sinon
+
+1089
+00:48:44,400 --> 00:48:46,140
+nous rendons les livres, la voiture
+
+1090
+00:48:46,140 --> 00:48:49,260
+et les livrets, vérifions maintenant
+
+1091
+00:48:49,260 --> 00:48:53,420
+le résultat jusqu'à connaître l'application
+
+1092
+00:48:53,780 --> 00:48:57,180
+après le chargement, nous pouvons voir la table et
+
+1093
+00:48:57,180 --> 00:48:59,339
+si je choisis les cartes, nous  Je peux voir le
+
+1094
+00:48:59,339 --> 00:49:02,700
+composant des cartes, alors allons-y et complétons-le
+
+1095
+00:49:02,700 --> 00:49:05,160
+ici, nous devons importer le lien du réacteur vers
+
+1096
+00:49:05,160 --> 00:49:08,280
+le bas, puis nous devons importer la diapositive de texte ouverte du livre Pi
+
+1097
+00:49:08,280 --> 00:49:12,480
+et nous sommes l'utilisateur Circle AI,
+
+1098
+00:49:12,480 --> 00:49:15,839
+modifier le contour et cette information. Cercle
+
+1099
+00:49:15,839 --> 00:49:18,599
+et le contour supprimer, puis j'ai reçu
+
+1100
+00:49:18,599 --> 00:49:20,460
+les livres comme accessoires
+
+1101
+00:49:20,460 --> 00:49:22,680
+pour mon individu, utilisons les noms de classe
+
+1102
+00:49:22,680 --> 00:49:26,579
+de la grille et les colonnes de qualité SM de 2 sur la
+
+1103
+00:49:26,579 --> 00:49:29,400
+grille LG Les colonnes de 3 et un Excel lui donnent des
+
+1104
+00:49:29,400 --> 00:49:31,260
+colonnes de quatre afin qu'il soit
+
+1105
+00:49:31,260 --> 00:49:33,960
+réactif en fonction de la taille de l'écran,
+
+1106
+00:49:33,960 --> 00:49:36,300
+nous devons alors utiliser la carte bookstart  et recevez
+
+1107
+00:49:36,300 --> 00:49:38,760
+l'élément et renvoyez une division avec la clé
+
+1108
+00:49:38,760 --> 00:49:41,160
+de l'élément qui souligne l'ID et les
+
+1109
+00:49:41,160 --> 00:49:44,700
+noms de classe sont en bordure de 2 bordures grises de 500,
+
+1110
+00:49:44,700 --> 00:49:48,000
+exécutez le grand rembourrage xr4 par
+
+1111
+00:49:48,000 --> 00:49:52,260
+2 marge de 4 relatif et cependant nous
+
+1112
+00:49:52,260 --> 00:49:55,640
+avons l'ombre de son grand
+
+1113
+00:49:56,940 --> 00:49:59,640
+au lieu de cela  utilisons d'abord une
+
+1114
+00:49:59,640 --> 00:50:02,880
+balise H2 avec des noms de classe en haut absolu à
+
+1115
+00:50:02,880 --> 00:50:06,839
+droite de deux remplissage X de 4 remplissage y de
+
+1116
+00:50:06,839 --> 00:50:11,099
+1 taux de BG de 300 et arrondi LG et
+
+1117
+00:50:11,099 --> 00:50:15,200
+pour le texte nous pouvons utiliser item.publisher
+
+1118
+00:50:15,200 --> 00:50:18,240
+puis ayons un H4 avec des noms de classe
+
+1119
+00:50:18,240 --> 00:50:21,900
+de la marge y de 2 prend une zone de 500 et
+
+1120
+00:50:21,900 --> 00:50:24,960
+nous pouvons utiliser item.underline ID Inside Out
+
+1121
+00:50:24,960 --> 00:50:28,020
+est H4 puis ayons une division avec le
+
+1122
+00:50:28,020 --> 00:50:30,540
+nom de classe des drapeaux justifions un début d'
+
+1123
+00:50:30,540 --> 00:50:34,380
+alignement des éléments de Center et GAP X de 2 et à
+
+1124
+00:50:34,380 --> 00:50:36,599
+l'intérieur de cela, utilisons Pi  livre ouvert
+
+1125
+00:50:36,599 --> 00:50:39,359
+diapositive de texte et pour les noms de classe,
+
+1126
+00:50:39,359 --> 00:50:42,900
+utilisons un taux de texte de 300 et un texte de 2x grand,
+
+1127
+00:50:42,900 --> 00:50:45,480
+nous pouvons alors avoir un H2 avec un nom de classe
+
+1128
+00:50:45,480 --> 00:50:48,780
+de marge y de 1 et nous utilisons item.title
+
+1129
+00:50:48,780 --> 00:50:51,900
+pour son étiquette
+
+1130
+00:50:51,900 --> 00:50:53,819
+après cela, je veux avoir une autre
+
+1131
+00:50:53,819 --> 00:50:55,800
+division  avec les noms de classe de drapeaux
+
+1132
+00:50:55,800 --> 00:50:58,980
+justifient un élément de départ de Center et GAP
+
+1133
+00:50:58,980 --> 00:51:02,640
+X de 2 et j'utilise une icône de via user
+
+1134
+00:51:02,640 --> 00:51:05,760
+circle avec des noms de classe de texte rouge 300
+
+1135
+00:51:05,760 --> 00:51:08,040
+et cela prend deux semaines puis j'utilise
+
+1136
+00:51:08,040 --> 00:51:10,740
+un nom de classe h2b de marge volume 1 et
+
+1137
+00:51:10,740 --> 00:51:14,460
+J'utilise item.atel pour son texte puis je veux
+
+1138
+00:51:14,460 --> 00:51:16,200
+avoir une autre division pour le bouton
+
+1139
+00:51:16,200 --> 00:51:18,300
+alors créons une nouvelle division avec la
+
+1140
+00:51:18,300 --> 00:51:21,599
+classe 9 de drapeaux justifiés entre les éléments
+
+1141
+00:51:21,599 --> 00:51:25,500
+de Center Gap X de 2 marge en haut de 4 et
+
+1142
+00:51:25,500 --> 00:51:28,380
+le remplissage R4 à l'intérieur de ce que je veux  pour avoir
+
+1143
+00:51:28,380 --> 00:51:30,780
+trois liens pour le premier, je veux
+
+1144
+00:51:30,780 --> 00:51:32,579
+avoir un lien vers une barre oblique des livres, une barre oblique,
+
+1145
+00:51:32,579 --> 00:51:36,660
+des détails, une barre oblique, item.id et pour l'icône, j'utilise un
+
+1146
+00:51:36,660 --> 00:51:38,760
+cercle d'informations BS avec des noms de classe de
+
+1147
+00:51:38,760 --> 00:51:41,819
+texte en x gros texte s'élevant à 800 et
+
+1148
+00:51:41,819 --> 00:51:44,579
+plus, quelle que soit la manière dont j'utilise  texte noir alors je veux
+
+1149
+00:51:44,579 --> 00:51:46,619
+ajouter un autre lien vers un
+
+1150
+00:51:46,619 --> 00:51:49,680
+élément slash de modification de livre slash qui, sous ID et
+
+1151
+00:51:49,680 --> 00:51:52,380
+j'utilise à nouveau l'édition de contour de l'IA avec
+
+1152
+00:51:52,380 --> 00:51:54,780
+les noms de classe du texte, est grand prend du jaune
+
+1153
+00:51:54,780 --> 00:51:57,540
+de 600 et cependant je veux avoir
+
+1154
+00:51:57,540 --> 00:52:00,240
+décolle du noir et  pour le dernier lien,
+
+1155
+00:52:00,240 --> 00:52:03,000
+utilisons un lien vers un slash books slash
+
+1156
+00:52:03,000 --> 00:52:06,960
+delete slash item.under ID et utilisons une
+
+1157
+00:52:06,960 --> 00:52:09,480
+icône de MD alt comme delete avec
+
+1158
+00:52:09,480 --> 00:52:12,000
+les noms de classe de modifications de texte, grand prend un rouge
+
+1159
+00:52:12,000 --> 00:52:14,940
+600 et cependant nous voulons avoir du texte
+
+1160
+00:52:14,940 --> 00:52:17,460
+noir maintenant, allons-y  revenons à notre
+
+1161
+00:52:17,460 --> 00:52:20,280
+application et testons-la
+
+1162
+00:52:20,280 --> 00:52:23,160
+et ici, après le chargement, nous pouvons choisir
+
+1163
+00:52:23,160 --> 00:52:25,559
+le tableau et nous pouvons voir la vue sous forme de tableau de
+
+1164
+00:52:25,559 --> 00:52:28,440
+nos livres et nous pouvons également utiliser la carte et
+
+1165
+00:52:28,440 --> 00:52:33,380
+nous pouvons voir la vue des cartes de nos livres
+
+1166
+00:52:33,960 --> 00:52:36,720
+dans la leçon précédente, nous avons implémenté le
+
+1167
+00:52:36,720 --> 00:52:39,480
+composant cicatrice de livre maintenant  améliorons les choses
+
+1168
+00:52:39,480 --> 00:52:42,000
+dans ces composants, nous mappons sur
+
+1169
+00:52:42,000 --> 00:52:44,460
+le tableau books et nous renvoyons une division
+
+1170
+00:52:44,460 --> 00:52:47,280
+pour chaque élément et nous l'utilisons comme une seule
+
+1171
+00:52:47,280 --> 00:52:49,619
+carte de livre, mais une meilleure approche consiste à
+
+1172
+00:52:49,619 --> 00:52:51,780
+faire de cette division un composant réutilisable
+
+1173
+00:52:51,780 --> 00:52:54,059
+afin que nous puissions l'utiliser dans  tous les autres
+
+1174
+00:52:54,059 --> 00:52:56,339
+composants que nous voulons et il est également plus facile
+
+1175
+00:52:56,339 --> 00:52:59,819
+de maintenir le refactor et de le modifier, alors
+
+1176
+00:52:59,819 --> 00:53:02,220
+coupons toute la division à l'intérieur de
+
+1177
+00:53:02,220 --> 00:53:05,400
+la carte et dans le dossier des composants à la maison,
+
+1178
+00:53:05,400 --> 00:53:08,220
+créons un nouveau composant puis réservons un
+
+1179
+00:53:08,220 --> 00:53:11,760
+seul carta.js6
+
+1180
+00:53:11,760 --> 00:53:14,460
+et collons la division en retour  section,
+
+1181
+00:53:14,460 --> 00:53:17,099
+il s'agit d'un composant distinct, nous
+
+1182
+00:53:17,099 --> 00:53:19,859
+avons donc reçu un objet livre comme accessoire et nous
+
+1183
+00:53:19,859 --> 00:53:23,960
+modifions toute l'utilisation de l'élément en livre.
+
+1184
+00:53:24,119 --> 00:53:27,119
+Après cela, nous avons besoin du lien et
+
+1185
+00:53:27,119 --> 00:53:29,520
+des icônes, copions-les tous depuis la
+
+1186
+00:53:29,520 --> 00:53:31,740
+voiture des livres
+
+1187
+00:53:31,740 --> 00:53:34,800
+et collons-les ici non.  c'est un
+
+1188
+00:53:34,800 --> 00:53:36,780
+composant réutilisable et il a juste besoin d'un
+
+1189
+00:53:36,780 --> 00:53:39,200
+recadrage de livre, revenons d'abord à la carte des livres
+
+1190
+00:53:39,200 --> 00:53:42,300
+ici, j'importe le nouveau composant
+
+1191
+00:53:42,300 --> 00:53:45,300
+puis dans la section carte, je renvoie le
+
+1192
+00:53:45,300 --> 00:53:48,300
+composant de carte unique du livre et je passe la clé des
+
+1193
+00:53:48,300 --> 00:53:51,599
+éléments qui soulignent le tweet d'identification et je
+
+1194
+00:53:51,599 --> 00:53:54,200
+passe également  un livre équivaut à un accessoire d'élément
+
+1195
+00:53:54,200 --> 00:53:57,660
+et c'est tout non, cela doit fonctionner, allons
+
+1196
+00:53:57,660 --> 00:54:01,520
+dans l'application et testons-la
+
+1197
+00:54:01,559 --> 00:54:04,319
+ici après l'actualisation, tout doit fonctionner
+
+1198
+00:54:04,319 --> 00:54:07,319
+correctement et ouvrez également la console et vérifiez
+
+1199
+00:54:07,319 --> 00:54:09,300
+que vous n'avez aucune erreur ici dans la
+
+1200
+00:54:09,300 --> 00:54:11,720
+console
+
+1201
+00:54:12,540 --> 00:54:15,300
+maintenant, allons-y  ajouter une autre fonctionnalité à notre
+
+1202
+00:54:15,300 --> 00:54:17,640
+projet Je veux avoir un modèle pour afficher
+
+1203
+00:54:17,640 --> 00:54:20,220
+des informations pour chaque livre dans la
+
+1204
+00:54:20,220 --> 00:54:22,800
+maison des composants, créons un nouveau nom de fichier
+
+1205
+00:54:22,800 --> 00:54:25,260
+bookmodel.jsx
+
+1206
+00:54:25,260 --> 00:54:28,500
+et à l'intérieur de celui-ci, importons d'abord le
+
+1207
+00:54:28,500 --> 00:54:31,619
+clone du contour AI Pi livre ouvrez la diapositive de texte
+
+1208
+00:54:31,619 --> 00:54:35,220
+et via le cercle utilisateur  icônes de réaction du téléphone,
+
+1209
+00:54:35,220 --> 00:54:38,700
+définissons ensuite quelques accessoires, nous avons donc besoin de
+
+1210
+00:54:38,700 --> 00:54:41,520
+Bush et, à la fermeture, nous utilisons ce livre pour
+
+1211
+00:54:41,520 --> 00:54:44,099
+afficher certaines données et utilisons unclose pour fermer
+
+1212
+00:54:44,099 --> 00:54:46,559
+le modèle, puis pour la division principale,
+
+1213
+00:54:46,559 --> 00:54:50,400
+utilisons ces classes fixes Digi black vgo
+
+1214
+00:54:50,400 --> 00:54:54,660
+opacity 60 haut de 0 à gauche de 0  à droite de
+
+1215
+00:54:54,660 --> 00:54:58,680
+zéro en bas de zéro indice Z de 50 Flex
+
+1216
+00:54:58,680 --> 00:55:02,940
+justifie du Centre et des éléments du Centre
+
+1217
+00:55:02,940 --> 00:55:06,180
+et pour un clic nous invoquons sur l'accessoire fermé
+
+1218
+00:55:06,180 --> 00:55:09,119
+c'est le conteneur de notre modèle c'est
+
+1219
+00:55:09,119 --> 00:55:10,980
+une division fixe qui serait au
+
+1220
+00:55:10,980 --> 00:55:13,500
+dessus de tout et nous avons ajouté Z  index
+
+1221
+00:55:13,500 --> 00:55:16,980
+de 15 pour être sûr de cela à l'intérieur de
+
+1222
+00:55:16,980 --> 00:55:19,260
+cela, ayons une autre division pour
+
+1223
+00:55:19,260 --> 00:55:21,359
+un clic, nous recevons l'événement et nous appelons la
+
+1224
+00:55:21,359 --> 00:55:24,240
+propagation event.stop et pour les
+
+1225
+00:55:24,240 --> 00:55:27,960
+noms de classe, nous utilisons une largeur de 600 pixels, une
+
+1226
+00:55:27,960 --> 00:55:31,619
+largeur maximale de 400 pixels, ils
+
+1227
+00:55:31,619 --> 00:55:34,140
+sont blancs arrondis  c'est un grand remplissage
+
+1228
+00:55:34,140 --> 00:55:37,559
+de quatre colonnes Flags Flex et la position
+
+1229
+00:55:37,559 --> 00:55:39,960
+du relatif, nous utilisons une propagation de stock
+
+1230
+00:55:39,960 --> 00:55:42,540
+de sorte qu'à chaque clic, le parent et le
+
+1231
+00:55:42,540 --> 00:55:44,880
+clic ne soient pas invoqués car nous
+
+1232
+00:55:44,880 --> 00:55:46,859
+avons besoin que ce modèle soit fermé uniquement dans deux
+
+1233
+00:55:46,859 --> 00:55:49,619
+conditions, cliquez d'abord en dehors de la
+
+1234
+00:55:49,619 --> 00:55:53,040
+zone blanche du modèle  et deuxième cliquez sur le
+
+1235
+00:55:53,040 --> 00:55:54,839
+bouton de fermeture rouge de la zone vide du modèle
+
+1236
+00:55:54,839 --> 00:55:58,500
+qui sera bientôt implémenté. Maintenant, nous avons notre
+
+1237
+00:55:58,500 --> 00:56:00,720
+modèle et nous pouvons afficher tout ce que nous voulons
+
+1238
+00:56:00,720 --> 00:56:04,020
+juste pour le bouton de fermeture. J'utilise AIO Auto
+
+1239
+00:56:04,020 --> 00:56:06,300
+et l'icône de fermeture avec les noms de famille de
+
+1240
+00:56:06,300 --> 00:56:10,260
+radiation absolue.  6 top of 6 décolle
+
+1241
+00:56:10,260 --> 00:56:13,800
+3x grand taux de prise de 600 et curseur
+
+1242
+00:56:13,800 --> 00:56:16,440
+hors pointeur et jusqu'à ce que j'appelle et ferme
+
+1243
+00:56:16,440 --> 00:56:18,599
+les accessoires afin que ce bouton ferme notre
+
+1244
+00:56:18,599 --> 00:56:21,660
+modèle, copions ensuite certains des
+
+1245
+00:56:21,660 --> 00:56:23,640
+éléments de la carte de démarrage unique ici pour montrer au
+
+1246
+00:56:23,640 --> 00:56:27,559
+spectateur que vous pouvez choisir tout ce que vous voulez  je veux
+
+1247
+00:56:29,640 --> 00:56:32,819
+et pour le premier H2 qui est publié
+
+1248
+00:56:32,819 --> 00:56:35,940
+ici je supprime ces classes absolue top
+
+1249
+00:56:35,940 --> 00:56:39,780
+one Android 2 et j'utilise Vita fit et
+
+1250
+00:56:39,780 --> 00:56:42,359
+après eux j'utilise deux paragraphes facultatifs
+
+1251
+00:56:42,359 --> 00:56:44,339
+vous pouvez les utiliser ou vous pouvez les ignorer
+
+1252
+00:56:44,339 --> 00:56:46,680
+et ce ne sont que quatre démonstrations
+
+1253
+00:56:46,680 --> 00:56:49,980
+maintenant notre modèle  est terminé et il est temps
+
+1254
+00:56:49,980 --> 00:56:52,680
+de l'utiliser, allons réserver des cartes simples
+
+1255
+00:56:52,680 --> 00:56:55,980
+et nous devons d'abord importer un bi-show, puis
+
+1256
+00:56:55,980 --> 00:56:59,400
+nous importons l'état de l'utilisateur et le modèle de livre, puis
+
+1257
+00:56:59,400 --> 00:57:01,740
+nous avons besoin d'un nouveau modèle d'affichage du nom du domaine
+
+1258
+00:57:01,740 --> 00:57:04,619
+avec la valeur par défaut des fichiers, cet état
+
+1259
+00:57:04,619 --> 00:57:06,300
+contrôlerait l'ouverture  et fermons l'
+
+1260
+00:57:06,300 --> 00:57:08,220
+état de notre modèle
+
+1261
+00:57:08,220 --> 00:57:11,880
+no sur la division des liens, ajoutons un bi show
+
+1262
+00:57:11,880 --> 00:57:14,940
+avec des noms de classe de texte 3x grand
+
+1263
+00:57:14,940 --> 00:57:17,940
+prenant en dessous de 800 et cependant ayons un
+
+1264
+00:57:17,940 --> 00:57:20,280
+arrêt de tique noir et le curseur hors
+
+1265
+00:57:20,280 --> 00:57:23,280
+pointeur et ankylic nous appelons ce modèle d'exposition
+
+1266
+00:57:23,280 --> 00:57:25,859
+avec valeur  bien sûr, c'est pour
+
+1267
+00:57:25,859 --> 00:57:27,359
+montrer notre modèle
+
+1268
+00:57:27,359 --> 00:57:29,460
+et avant la dernière division de ce
+
+1269
+00:57:29,460 --> 00:57:31,559
+composant, ouvrons une course bouclée pour
+
+1270
+00:57:31,559 --> 00:57:33,900
+accéder à JavaScript et vérifions si show
+
+1271
+00:57:33,900 --> 00:57:36,180
+model est vrai, puis nous exécutons le modèle de livre
+
+1272
+00:57:36,180 --> 00:57:39,480
+et nous lui passons le livre pour des kilos que
+
+1273
+00:57:39,480 --> 00:57:41,819
+nous appelons Central  modèle avec la valeur des
+
+1274
+00:57:41,819 --> 00:57:45,240
+fichiers et c'est tout maintenant, allons à l'
+
+1275
+00:57:45,240 --> 00:57:47,819
+application et vérifions le résultat
+
+1276
+00:57:47,819 --> 00:57:50,579
+et ici pour la vue des cartes, nous pouvons voir l'
+
+1277
+00:57:50,579 --> 00:57:52,920
+icône du modèle et en cliquant sur les pistes, nous
+
+1278
+00:57:52,920 --> 00:57:55,500
+pouvons ouvrir le modèle et voir les données et
+
+1279
+00:57:55,500 --> 00:57:57,420
+vous pouvez voir cela si je  cliquez à l'intérieur de
+
+1280
+00:57:57,420 --> 00:57:59,579
+la zone blanche, le modèle est toujours ouvert
+
+1281
+00:57:59,579 --> 00:58:02,460
+mais cliquer sur le bouton Fermer fermera
+
+1282
+00:58:02,460 --> 00:58:05,040
+le modèle et cliquer sur tous les côtés de la
+
+1283
+00:58:05,040 --> 00:58:09,319
+zone du modèle fermera également le modèle.
+
+1284
+00:58:10,319 --> 00:58:13,200
+Notre projet de librairie a une
+
+1285
+00:58:13,200 --> 00:58:15,300
+fonctionnalité Cloud complète mais nous pouvons le rendre
+
+1286
+00:58:15,300 --> 00:58:17,940
+encore meilleur lorsque nous le modifions.  notre base de données que
+
+1287
+00:58:17,940 --> 00:58:21,240
+nous créons, mettons à jour ou supprimons, nous redirigeons
+
+1288
+00:58:21,240 --> 00:58:23,400
+notre utilisateur vers la page d'accueil si l'opération
+
+1289
+00:58:23,400 --> 00:58:25,859
+réussit mais nous ne donnons aucun
+
+1290
+00:58:25,859 --> 00:58:27,960
+retour et l'utilisateur ne peut voir aucun
+
+1291
+00:58:27,960 --> 00:58:29,880
+détail sur les opérations et ce
+
+1292
+00:58:29,880 --> 00:58:32,819
+n'est pas bon pour notre expérience utilisateur.
+
+1293
+00:58:32,819 --> 00:58:35,040
+L'approche consiste à montrer une belle alerte à
+
+1294
+00:58:35,040 --> 00:58:37,500
+l'utilisateur, nous pouvons utiliser l'alerte du navigateur par défaut
+
+1295
+00:58:37,500 --> 00:58:40,140
+mais ce n'est pas beau. Je veux utiliser un
+
+1296
+00:58:40,140 --> 00:58:42,660
+nom de package npm pas ici, pile dans la
+
+1297
+00:58:42,660 --> 00:58:44,760
+page npm de la pile coquine, vous pouvez voir comment l'
+
+1298
+00:58:44,760 --> 00:58:46,980
+installer et l'utiliser en fonction du
+
+1299
+00:58:46,980 --> 00:58:48,839
+document.  et un composant d'application de sangle femelle
+
+1300
+00:58:48,839 --> 00:58:51,119
+à l'intérieur d'un fournisseur Web de collations pour avoir
+
+1301
+00:58:51,119 --> 00:58:53,760
+accès au cortex du crochet, allons donc
+
+1302
+00:58:53,760 --> 00:58:56,819
+au projet et utilisons-le d'abord. Nous devons d'abord
+
+1303
+00:58:56,819 --> 00:58:58,859
+avoir un terminal sur le répertoire frontal
+
+1304
+00:58:58,859 --> 00:59:04,040
+et nous tapons npmi, notons votre pile,
+
+1305
+00:59:04,440 --> 00:59:07,619
+puis passons à  main.js6 et ici nous
+
+1306
+00:59:07,619 --> 00:59:09,960
+importons un fournisseur de snack-bar de Naughty
+
+1307
+00:59:09,960 --> 00:59:12,480
+stack puis nous l'utilisons pour y avoir
+
+1308
+00:59:12,480 --> 00:59:15,960
+accès sur tous nos projets maintenant,
+
+1309
+00:59:15,960 --> 00:59:18,799
+utilisons-le d'abord, allons au
+
+1310
+00:59:18,799 --> 00:59:21,299
+createbook.js6 et ici dans la
+
+1311
+00:59:21,299 --> 00:59:23,880
+section supérieure d'abord nous  besoin d'importer utiliser un
+
+1312
+00:59:23,880 --> 00:59:26,760
+snack-bar depuis Nokia Stack puis avec la
+
+1313
+00:59:26,760 --> 00:59:28,440
+structure et créer un snack-bar à partir d'
+
+1314
+00:59:28,440 --> 00:59:30,119
+utiliser un snack-bar
+
+1315
+00:59:30,119 --> 00:59:32,700
+puis à portée de main la fonction de livre
+
+1316
+00:59:32,700 --> 00:59:35,400
+avant de naviguer vers une ligne barre oblique, nous pouvons
+
+1317
+00:59:35,400 --> 00:59:37,680
+l'appeler par exemple je peux l'appeler comme
+
+1318
+00:59:37,680 --> 00:59:40,380
+collation d'enquête  barre avec un message comme
+
+1319
+00:59:40,380 --> 00:59:43,079
+qui a créé avec succès et nous pouvons transmettre
+
+1320
+00:59:43,079 --> 00:59:45,540
+certaines options comme la variante ou le succès
+
+1321
+00:59:45,540 --> 00:59:48,240
+également sur catch ci-dessous nous pouvons utiliser un autre
+
+1322
+00:59:48,240 --> 00:59:50,700
+exemple par exemple dans la file d'attente une barre de collation
+
+1323
+00:59:50,700 --> 00:59:53,940
+d'erreur avec la variante de Arrow et
+
+1324
+00:59:53,940 --> 00:59:56,760
+c'est tout donc nous montrons une belle alerte
+
+1325
+00:59:56,760 --> 00:59:59,280
+à la place  des couleurs par défaut du navigateur laides
+
+1326
+00:59:59,280 --> 01:00:01,579
+et c'est tout, allons sur
+
+1327
+01:00:01,579 --> 01:00:04,799
+editbook.js6 et faisons de même, nous devons d'abord
+
+1328
+01:00:04,799 --> 01:00:07,020
+importer un snack-bar à partir de
+
+1329
+01:00:07,020 --> 01:00:09,480
+votre pile, puis avec la structure et
+
+1330
+01:00:09,480 --> 01:00:11,520
+créer un snack-bar à partir du snack-bar de l'utilisateur,
+
+1331
+01:00:11,520 --> 01:00:14,280
+puis annuler la modification du livre  fonction
+
+1332
+01:00:14,280 --> 01:00:16,920
+avant de naviguer vers une route oblique, nous pouvons
+
+1333
+01:00:16,920 --> 01:00:19,559
+l'appeler ainsi et créer un snack-bar avec
+
+1334
+01:00:19,559 --> 01:00:22,440
+le message du livre édité avec succès et des
+
+1335
+01:00:22,440 --> 01:00:25,380
+variantes de succès et également sur la capture ci
+
+1336
+01:00:25,380 --> 01:00:27,660
+-dessous, nous pouvons utiliser augmenter le snack-bar avec un
+
+1337
+01:00:27,660 --> 01:00:30,119
+message d'erreur et une variante d'erreur
+
+1338
+01:00:30,119 --> 01:00:32,579
+et après cela, je  Je veux l'utiliser pour
+
+1339
+01:00:32,579 --> 01:00:35,040
+supprimer une opération de livre, alors allons dans
+
+1340
+01:00:35,040 --> 01:00:37,619
+deletebook.js6 et ici, nous
+
+1341
+01:00:37,619 --> 01:00:39,780
+importons d'abord une barre de pile à partir d'une balise de notification,
+
+1342
+01:00:39,780 --> 01:00:41,940
+puis avec cette structure et créons
+
+1343
+01:00:41,940 --> 01:00:44,819
+un snack-bar à partir de l'utilisation d'un snack-bar,
+
+1344
+01:00:44,819 --> 01:00:46,859
+puis sur la poignée de suppression.
+
+1345
+01:00:46,859 --> 01:00:49,079
+fonction de livre avant de naviguer vers une
+
+1346
+01:00:49,079 --> 01:00:51,960
+ligne de barre oblique, je l'appelle comme augmentation du snack-bar du
+
+1347
+01:00:51,960 --> 01:00:54,420
+livre supprimé avec succès avec une variante
+
+1348
+01:00:54,420 --> 01:00:57,240
+de succès et je l'appelle également sur catch ci
+
+1349
+01:00:57,240 --> 01:00:59,160
+-dessous comme ceci et crée un snack-bar
+
+1350
+01:00:59,160 --> 01:01:01,079
+avec un message d'erreur et une variante d'
+
+1351
+01:01:01,079 --> 01:01:03,900
+erreur maintenant nous avons beau  commentaires pour la
+
+1352
+01:01:03,900 --> 01:01:06,960
+création d'un livre, mise à jour d'un livre et également
+
+1353
+01:01:06,960 --> 01:01:08,819
+suppression d'un livre, allons sur notre
+
+1354
+01:01:08,819 --> 01:01:12,180
+application et testons-la
+
+1355
+01:01:12,180 --> 01:01:15,059
+d'abord, créons un nouveau livre après
+
+1356
+01:01:15,059 --> 01:01:17,220
+l'opération, nous pouvons voir de belles
+
+1357
+01:01:17,220 --> 01:01:19,140
+alertes vertes avec le message du livre créé
+
+1358
+01:01:19,140 --> 01:01:21,720
+avec succès et sera redirigé vers la
+
+1359
+01:01:21,720 --> 01:01:24,540
+page d'accueil maintenant  éditez un livre et
+
+1360
+01:01:24,540 --> 01:01:27,420
+changez-le et après l'opération, nous pouvons voir des
+
+1361
+01:01:27,420 --> 01:01:29,760
+alertes vertes, nous enlevons le livre édité
+
+1362
+01:01:29,760 --> 01:01:32,099
+avec succès et nous serons redirigés
+
+1363
+01:01:32,099 --> 01:01:34,740
+vers la page d'accueil et enfin, testons
+
+1364
+01:01:34,740 --> 01:01:37,020
+à nouveau la suppression du livre après l'opération, nous
+
+1365
+01:01:37,020 --> 01:01:39,359
+devons voir des alertes vertes, il enlève le livre
+
+1366
+01:01:39,359 --> 01:01:41,880
+supprimé avec succès et nous  doit être
+
+1367
+01:01:41,880 --> 01:01:44,880
+redirigé vers la page d'accueil et maintenant notre
+
+1368
+01:01:44,880 --> 01:01:47,400
+application a une meilleure expérience utilisateur,
+
+1369
+01:01:47,400 --> 01:01:50,099
+c'est la dernière leçon de notre
+
+1370
+01:01:50,099 --> 01:01:53,220
+projet d'histoire du livre. J'espère que vous l'apprécierez,
+
+1371
+01:01:53,220 --> 01:01:55,559
+faites-moi savoir si cela a été utile ou non et les
+
+1372
+01:01:55,559 --> 01:01:59,960
+commentaires passent un bon moment et au revoir
+
